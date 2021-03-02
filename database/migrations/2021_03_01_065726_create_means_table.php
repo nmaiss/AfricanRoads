@@ -18,7 +18,7 @@ class CreateMeansTable extends Migration
             $table->text('name')->nullable();
             $table->text('image')->nullable();
             $table->text('number_places')->nullable();
-            $table->text('important')->default('false')->nullable();
+            $table->text('important')->nullable();
             $table->timestamps();
         });
     }
