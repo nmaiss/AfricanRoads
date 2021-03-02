@@ -1,0 +1,35 @@
+
+
+#flag img{
+    height: 25vh;
+    margin: 5vh 8vh 5vh 8vh;
+}
+
+#flag{
+    background-color: white;
+    margin-top: 29vh;
+    transform: translateY(-50%);
+    display: inline-block;
+    position: absolute;
+    border-radius: 0px 60px 60px 0px;
+}
+
+#selection select{
+    height: 15vh;
+    width: 40vw;
+    text-align-last: center;
+    background-color: #FFFFFF;
+    color: #D9D9D9;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 60px;
+}
+
+#selection{
+    background-color: white;
+    height: 15vh;
+    width: 40vw;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
