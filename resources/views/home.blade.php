@@ -4,6 +4,33 @@
 
 @section('content')
 
+<style>
+
+#means-home{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+#means-home img{
+    width: 60px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+</style>
+
+<div id="means-home">
+    <div class="container">
+      <div class="row justify-content-md-center">
+        @foreach($means as $mean)
+            <div class="col-md-auto">
+                <img src='/storage/{{$mean->image}}'>
+            </div>
+        @endforeach
+      </div>
+  </div>
+</div>
+
 <div class="container-fluid">
     <div class="row">
       <div class="col">
