@@ -7,6 +7,10 @@ use App\Models\Mean;
 
 class MeanController extends Controller
 {
+    public function index() {
+        return Mean::all();
+    }
+
     public function store(Request $req) {
         $filePath = '';
         if($req->file('image')) {

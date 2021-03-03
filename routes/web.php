@@ -38,5 +38,6 @@ Route::get('/country/index', [\App\Http\Controllers\CountryController::class, 'i
 Route::post('/country/store', [\App\Http\Controllers\CountryController::class, 'store']);
 Route::get('/country/{id}/delete', [\App\Http\Controllers\CountryController::class, 'delete']);
 
+Route::get('/mean/index', [\App\Http\Controllers\MeanController::class, 'index']);
 Route::post('/mean/store', [\App\Http\Controllers\MeanController::class, 'store']);
 Route::get('/mean/{id}/delete', [\App\Http\Controllers\MeanController::class, 'delete']);

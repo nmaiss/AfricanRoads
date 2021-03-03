@@ -188,7 +188,7 @@
                             <b-col class="mean" v-for="mean in means"  :key="mean.name" v-on:click="select(mean.name)" :class="mean.name === choosed_mean ? 'selected' : ''">
                                 {{ mean.name }}
                                 <div class="mean-image">
-                                    <img :src="mean.image">
+                                    <img :src="'/storage/' + mean.image">
                                 </div>
                                 <div class="mean-arrow" v-if="mean.name == choosed_mean">
                                     <img src="/images/check.png">
@@ -362,14 +362,7 @@
           return {
             countries: [],
             countries_object: [],
-            means: [
-                { name: 'Scooter', image: '/images/scooter.png' },
-                { name: 'Véhicule', image: '/images/jeep.png' },
-                { name: 'Taxi', image: '/images/taxi.png' },
-                { name: 'Bus', image: '/images/bus (1).png' },
-                { name: 'Camion', image: '/images/truck.png' },
-                { name: 'Bateau', image: '/images/cargo-ship.png' }
-            ],
+            means: [],
             current_step: 0,
             max_step: 0,
             choosed_mean: "",
@@ -441,6 +434,11 @@
             axios.get('/country/index')
                 .then((response) => {
                     this.countries_object=response.data;
+                    console.log(response)
+                })
+            axios.get('/mean/index')
+                .then((response) => {
+                    this.means=response.data;
                     console.log(response)
                 })
             console.log('Component mounted.')
