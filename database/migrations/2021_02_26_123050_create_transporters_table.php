@@ -16,6 +16,7 @@ class CreateTransportersTable extends Migration
         Schema::create('transporters', function (Blueprint $table) {
             $table->id();
             $table->text('mean')->nullable();
+            $table->text('mean_image')->nullable();
             $table->text('date')->nullable();
             $table->text('hour')->nullable();
             $table->text('from')->nullable();

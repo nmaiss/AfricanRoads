@@ -11,6 +11,14 @@
     margin-right: 500px!important;
 }
 
+.mean-image{
+    text-align: center;
+}
+
+.mean-image img{
+    height: 50px;
+}
+
 </style>
 
 <template>
@@ -19,7 +27,14 @@
               <b-tabs content-class="mt-3" justified>
                 <b-tab title="Transporteur(s)" active >
                     <p>
-                        <b-table striped hover :items="transporters" :fields="fields_transporters"></b-table>
+                        <b-table striped hover :items="transporters" :fields="fields_transporters">
+                            <template #cell(mean_image)="data" class="mean-image">
+                                <img :src="'/storage/' + data.item.mean_image" height="25px">
+                            </template>
+                            <template #cell(contact)="data">
+                                <contact></contact>
+                            </template>
+                        </b-table>
                     </p>
                 </b-tab>
                 <b-tab title="Expéditeur(s) ou voyageur(s)">
@@ -42,9 +57,11 @@
                 to: "",
                 transporters: [],
                 expedients: [],
+                fields: ['T', 'Date', 'Type', 'Départ', 'Heure', 'Arrivé', 'Disponnibilité', 'Contact'],
                 fields_transporters: [
                     {
-                        key: 'T',
+                        key: 'mean_image',
+                        label: 'T'
                     },
                     {
                         key: 'date',
@@ -113,7 +130,9 @@
         },
         mounted() {
             console.log('Component mounted.');
-            axios.get('/transport/get').then(response => (this.transporters = response.data))
+            axios.get('/transport/get').then(
+                response => (this.transporters = response.data)
+            )
             axios.get('/travel/get').then(response => (this.expedients = response.data))
         }
     }

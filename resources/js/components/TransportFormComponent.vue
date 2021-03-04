@@ -91,12 +91,20 @@
 }
 
 .input-form {
-    background-color: #D9EAD3;
-    color: #93C47D;
+    background-color: #D9EAD3!important;
+    color: #93C47D!important;
     border: 5px solid #B6D7A8;
     border-radius: 10px;
     height: 45px;
     text-align: center;
+}
+
+.btn-secondary{
+    background-color: #D9EAD3!important;
+    color: #93C47D!important;
+    text-align: center;
+    border: none!important;
+    width: 100%;
 }
 
 .check-form {
@@ -157,6 +165,10 @@
     height: 100px;
 }
 
+b-drop-down img{
+    height: 20px;
+}
+
 </style>
 
 <template>
@@ -185,7 +197,7 @@
 
                     <b-container id="means">
                         <b-row>
-                            <b-col class="mean" v-for="mean in means"  :key="mean.name" v-on:click="select(mean.name)" :class="mean.name === choosed_mean ? 'selected' : ''">
+                            <b-col class="mean" v-for="mean in means"  :key="mean.name" v-on:click="select(mean)" :class="mean.name === choosed_mean ? 'selected' : ''">
                                 {{ mean.name }}
                                 <div class="mean-image">
                                     <img :src="'/storage/' + mean.image">
@@ -292,7 +304,13 @@
                             <img src="/images/check.png" class="check-form" v-if="company != ''">
                         </b-col>
                         <b-col align-self="stretch">
-                            <b-form-select :options="countries" class="input-form big-form"></b-form-select>
+                            <b-dropdown text="Indicatif" class="input-form big-form" v-model="country">
+                                <b-dropdown-item v-model="country" v-bind:value="country_object.id" v-for="country_object in countries_object" :key="country_object.id">
+                                  <img :src="'/storage/' + country_object.country_flag" height="50px">
+                                  {{ country_object.telephone_code }}
+                                </b-dropdown-item>
+                            </b-dropdown>
+
                         </b-col>
                         <b-col align-self="stretch">
                             <b-form-input v-model="phone_number" class="input-form big-form"  placeholder="Numéro de téléphone"></b-form-input>
@@ -366,6 +384,7 @@
             current_step: 0,
             max_step: 0,
             choosed_mean: "",
+            mean_image: "",
             date: "",
             hour: "",
             from: "",
@@ -381,11 +400,12 @@
         },
         methods: {
             select(mean){
-                if (this.choosed_mean === mean){
+                if (this.choosed_mean === mean.name){
                     this.choosed_mean = "";
                 }
                 else {
-                    this.choosed_mean = mean;
+                    this.choosed_mean = mean.name;
+                    this.mean_image = mean.image;
                 }
             },
             add() {

@@ -30,6 +30,7 @@ Vue.component('table-component', require('./components/TableComponent.vue').defa
 Vue.component('form-controller', require('./components/FormControllerComponent.vue').default);
 Vue.component('send-form-component', require('./components/SendFormController.vue').default);
 Vue.component('travel-form-component', require('./components/TravelFormComponent.vue').default);
+Vue.component('contact', require('./components/ContactComponent.vue').default);
 Vue.component('welcome', require('./components/WelcomeComponent.vue').default);
 Vue.use(BootstrapVue)
 

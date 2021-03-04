@@ -14,6 +14,7 @@ class TransporterController extends Controller
     public function store(Request $request){
         $newItem = new Transporter;
         $newItem->mean = $request->input('choosed_mean');
+        $newItem->mean_image = $request->input('mean_image');
         $newItem->date = $request->input('date');
         $newItem->hour = $request->input('hour');
         $newItem->from = $request->input('from');
