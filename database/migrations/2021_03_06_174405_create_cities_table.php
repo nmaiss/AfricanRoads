@@ -17,7 +17,7 @@ class CreateCitiesTable extends Migration
             $table->id();
             $table->integer('country_id')->unsigned();
             $table->text('name');
-            $table->boolean('to_only');
+            $table->text('to_only');
             $table->timestamps();
         });
     }
