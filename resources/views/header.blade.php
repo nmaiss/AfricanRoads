@@ -1,6 +1,6 @@
 <style>
     #header{
-        margin-bottom: 80px;
+        margin-bottom: 40px;
         height: 15vh;
     }
     #header-header{
@@ -17,7 +17,6 @@
     #navbar-brand{
         position: absolute;
         left: 6vh;
-        height: 15vh;
         background-color: #F3F3F3;
     }
 
@@ -98,10 +97,6 @@
                             <div class="co" id="header-logo"></div>
                         </a>
                         <div class="col" id="free-service">Service<font color="#9FB793"> Gratuit</a></div>
-                    </div>
-                    <div class="row">
-                        <div class="col" id="header-country"><country></country></div>
-                        <div class="col" id="header-hour"><hour></hour></div>
                     </div>
                 </div>
             </div>
