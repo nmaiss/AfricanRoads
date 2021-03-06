@@ -5,6 +5,8 @@
     }
     #header-header{
         height: 5vh;
+        line-height: 5vh;
+        text-align: center;
         width: 100%;
         background: url("/images/Jungle.jpg") no-repeat center center fixed;
         background-size: cover;
@@ -88,7 +90,13 @@
 
 <div id="app-header">
     <div id="header">
-        <div id="header-header"></div>
+        <div id="header-header">
+            <div id="covid-message">
+                <p>
+                    Important | COVID-19
+                </p>
+            </div>
+        </div>
         <div id="navbar-header">
             <div id="navbar-brand">
                 <div class="container">
@@ -96,7 +104,7 @@
                         <a href="/">
                             <div class="co" id="header-logo"></div>
                         </a>
-                        <div class="col" id="free-service">Service<font color="#9FB793"> Gratuit</a></div>
+                        <div class="col" id="free-service">Service<font color="#9FB793">&nbsp;Gratuit</a></div>
                     </div>
                 </div>
             </div>

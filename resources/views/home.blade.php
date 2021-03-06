@@ -115,6 +115,8 @@
 </div>
 @endsection
 
+@include('footer')
+
 <style>
 
 @media (min-width: 1200px) {
