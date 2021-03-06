@@ -36,6 +36,35 @@
         border-radius: 30px;
     }
 
+    #facebook {
+        position: absolute;
+        bottom: 20px;
+        right: 40px;
+    }
+
+    #facebook img {
+        height: 150px;
+    }
+
+    #year {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        text-align: center;
+        background-color: white;
+        color: #E0E0E0;
+        border-radius: 15px;
+        font-weight: bold;
+    }
+
+    #year div{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: 30px;
+    }
+
 </style>
 
 <template>
@@ -61,6 +90,14 @@
                     </div>
                 </a>
             </div>
+        </div>
+
+        <div id="year">
+            <div>2021</div>
+        </div>
+
+        <div id="facebook">
+            <img src="/images/facebook.png">
         </div>
 
         <div id="flag">
