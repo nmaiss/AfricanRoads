@@ -125,7 +125,9 @@
                 </table>
             </div>
 
-            <div class="card">
+            @include('admin.city')
+
+            <div class="card mb-4">
                 <div class="card-header">{{ __('Ajouter des moyens de transport') }}</div>
                 <div class="card-body">
                     <form method="POST" action="/mean/store" enctype="multipart/form-data">
@@ -160,7 +162,7 @@
 
                             <div class="col-md-6">
                                 <div class="form-check">
-                                  <input class="form-check-input" type="checkbox" value="" id="important_check" name="important_check">
+                                  <input class="form-control" type="checkbox" value="" id="important_check" name="important_check">
                                 </div>
                             </div>
                         </div>
@@ -205,6 +207,8 @@
                   @endforeach
                 </table>
             </div>
+
+            @include('admin.delay')
         </div>
     </div>
 </div>

@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TransporterController;
 use App\Http\Controllers\TravelController;
 use App\Http\Controllers\MeanController;
+use App\Http\Controllers\CityController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,3 +42,11 @@ Route::get('/country/{id}/delete', [\App\Http\Controllers\CountryController::cla
 Route::get('/mean/index', [\App\Http\Controllers\MeanController::class, 'index']);
 Route::post('/mean/store', [\App\Http\Controllers\MeanController::class, 'store']);
 Route::get('/mean/{id}/delete', [\App\Http\Controllers\MeanController::class, 'delete']);
+
+Route::get('/delay/index', [\App\Http\Controllers\DelayController::class, 'index']);
+Route::post('/delay/store', [\App\Http\Controllers\DelayController::class, 'store']);
+Route::get('/delay/{id}/delete', [\App\Http\Controllers\DelayController::class, 'delete']);
+
+Route::get('/city/index', [\App\Http\Controllers\CityController::class, 'index']);
+Route::post('/city/store', [\App\Http\Controllers\CityController::class, 'store']);
+Route::get('/city/{id}/delete', [\App\Http\Controllers\CityController::class, 'delete']);
