@@ -7,10 +7,6 @@
     font-weight: bold!important;
 }
 
-.content-tables{
-    margin-right: 500px!important;
-}
-
 .mean-image{
     text-align: center;
 }
@@ -19,30 +15,72 @@
     height: 50px;
 }
 
+#header{
+    margin-bottom: 0px!important;
+}
+
+#sub-header{
+    height: 10vh;
+    width: 100%;
+    background: url("/images/Jungle.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+#headers{
+    text-align: center;
+}
+
+.col-header{
+    text-align: center;
+    height: 5vh;
+    line-height: 5vh;
+    background-color: #B5D6A7;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: -5vh;
+    width: 90%;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-100%);
+}
+
 </style>
 
 <template>
     <div>
-        <b-container class="content-tables ml-5 mr-5" fluid>
-              <b-tabs content-class="mt-3" justified>
-                <b-tab title="Transporteur(s)" active >
-                    <p>
-                        <b-table striped hover :items="transporters" :fields="fields_transporters">
-                            <template #cell(mean_image)="data" class="mean-image">
-                                <img :src="'/storage/' + data.item.mean_image" height="25px">
-                            </template>
-                            <template #cell(contact)="data">
-                                <contact :transporter="data.item"></contact>
-                            </template>
-                        </b-table>
-                    </p>
-                </b-tab>
-                <b-tab title="Expéditeur(s) ou voyageur(s)">
-                    <p>
-                        <b-table striped hover :items="expedients" :fields="fields_expedients"></b-table>
-                    </p>
-                </b-tab>
-              </b-tabs>
+        <div id="sub-header">
+
+        </div>
+        <b-container class="content-tables" fluid>
+            <b-row id="headers">
+                <b-col>
+                    <div class="col-header">
+                        Transporteur(s)
+                    </div>
+                </b-col>
+                <b-col>
+                    <div class="col-header">
+                        Expéditeur(s)
+                    </div>
+                </b-col>
+            </b-row>
+            <b-row>
+                <b-col class="border-right">
+                    <b-table hover :items="transporters" :fields="fields_transporters">
+                        <template #cell(mean_image)="data" class="mean-image">
+                            <img :src="'/storage/' + data.item.mean_image" height="25px">
+                        </template>
+                        <template #cell(contact)="data">
+                            <contact :transporter="data.item"></contact>
+                        </template>
+                    </b-table>
+                </b-col>
+                <b-col>
+                    <b-table striped hover :items="expedients" :fields="fields_expedients"></b-table>
+                </b-col>
+            </b-row>
         </b-container>
     </div>
 </template>
@@ -89,7 +127,7 @@
                     },
                     {
                         key: 'contact',
-                        label: 'Contact'
+                        label: ''
                     }
                 ],
                 fields_expedients: [
