@@ -169,10 +169,25 @@ b-drop-down img{
     height: 20px;
 }
 
+#home-menu {
+    position: absolute;
+    left: 60px;
+    top: 10px;
+}
+
+#home-menu img {
+    height: 100px;
+}
+
 </style>
 
 <template>
     <div>
+        <a href="/home">
+            <div id="home-menu">
+                <img src="/images/bouton-d_accueil.png">
+            </div>
+        </a>
         <div id="header-form">
             <div id="left-img-form">
                 <img src="/images/tourist.png">

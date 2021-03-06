@@ -185,6 +185,11 @@
 
 <template>
     <div>
+        <a href="/home">
+            <div id="home-menu">
+                <img src="/images/bouton-d_accueil.png">
+            </div>
+        </a>
         <div id="header-form">
             <div id="left-img-form">
                 <img src="/images/stock.png">
