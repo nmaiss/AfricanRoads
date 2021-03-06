@@ -47,6 +47,29 @@
     font-weight: bold;
 }
 
+th, td {
+    text-align: center!important;
+}
+
+.pair div {
+    padding: 10px;
+    background-color: #91C37C;
+    color: #447B2E;
+    border-radius: 5px;
+}
+
+.mean-image-tr div{
+    background-color: #92C27C;
+    color: white;
+    padding: 10px;
+}
+.impair div{
+    background-color: #D6E9D3;
+    color: #588F40;
+    border-radius: 5px;
+    padding: 10px;
+}
+
 </style>
 
 <template>
@@ -100,31 +123,39 @@
                 fields_transporters: [
                     {
                         key: 'mean_image',
-                        label: 'T'
+                        label: 'T',
+                        class: 'mean-image-tr'
                     },
                     {
                         key: 'date',
-                        label: 'Date'
+                        label: 'Date',
+                        class: 'pair'
+
                     },
                     {
                         key: 'mean',
-                        label: 'Type'
+                        label: 'Type',
+                        class: 'impair'
                     },
                     {
                         key: 'from',
-                        label: 'Départ'
+                        label: 'Départ',
+                        class: 'pair'
                     },
                     {
                         key: 'hour',
-                        label: 'Heure'
+                        label: 'Heure',
+                        class: 'impair'
                     },
                     {
                         key: 'to',
-                        label: 'Arrivée'
+                        label: 'Arrivée',
+                        class: 'pair'
                     },
                     {
                         key: 'number_places',
                         label: 'Disponnibilité'
+                        ,class: 'impair'
                     },
                     {
                         key: 'contact',
