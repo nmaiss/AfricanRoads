@@ -13,9 +13,12 @@ class CityController extends Controller
     }
 
     public function store(Request $req) {
+        $toonly = 'false';
+        if ($req->input('to_only_select'))
+            $toonly = 'on';
         Country::find($req->input('selected_country'))->cities()->create([
             'name' => $req->input('name'),
-            'to_only' => $req->input('to_only_select') ? 'on' : 'false'
+            'to_only' => $toonly
         ]);
         return redirect()->route('admin');
     }
