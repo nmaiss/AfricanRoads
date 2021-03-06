@@ -33,10 +33,10 @@
 .col-header{
     text-align: center;
     height: 6vh;
-    line-height: 6vh;
+    line-height: 5vh;
     background-color: #B5D6A7;
     color: white;
-    font-size: 20px;
+    font-size: 25px;
     position: absolute;
     width: 90%;
     top: 50%;
@@ -44,6 +44,7 @@
     transform: translate(-50%,-99%);
     border: 5px solid #92C27A;
     border-radius: 15px 15px 0px 0px;
+    font-weight: bold;
 }
 
 </style>
