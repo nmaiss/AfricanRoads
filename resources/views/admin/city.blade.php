@@ -10,7 +10,7 @@
                 <div class="col-md-6">
                     <select name="selected_country" id="selected_country" class="form-control">
                         @foreach($countries as $country)
-                            <option value="{{ $country->id }}">{{ $country->id }}</option>
+                            <option value="{{ $country->id }}">{{ $country->name }}</option>
                         @endforeach
                     </select>
                 </div>
