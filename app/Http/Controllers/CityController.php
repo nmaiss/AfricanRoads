@@ -12,6 +12,10 @@ class CityController extends Controller
         return City::all();
     }
 
+    public function index_from(){
+        return City::where('to_only', "on")->get();
+    }
+
     public function store(Request $req) {
         $toonly = 'false';
         if ($req->input('to_only_select'))

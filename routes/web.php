@@ -48,5 +48,6 @@ Route::post('/delay/store', [\App\Http\Controllers\DelayController::class, 'stor
 Route::get('/delay/{id}/delete', [\App\Http\Controllers\DelayController::class, 'delete']);
 
 Route::get('/city/index', [\App\Http\Controllers\CityController::class, 'index']);
+Route::get('/city/index_from', [\App\Http\Controllers\CityController::class, 'index_from']);
 Route::post('/city/store', [\App\Http\Controllers\CityController::class, 'store']);
 Route::get('/city/{id}/delete', [\App\Http\Controllers\CityController::class, 'delete']);

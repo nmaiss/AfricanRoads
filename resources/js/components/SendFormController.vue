@@ -212,11 +212,11 @@
                     <b-container class="bv-example-row bv-example-row-flex-cols infos-form">
                         <b-row class="mb-3">
                             <b-col>
-                                <b-form-select v-model="from" :options="countries" class="input-form"></b-form-select>
+                                <b-form-select v-model="from" :options="cities_from" class="input-form"></b-form-select>
                                 <img src="/images/check.png" class="check-form" v-if="from != ''">
                             </b-col>
                             <b-col>
-                                <b-form-select v-model="to" :options="countries" class="input-form"></b-form-select>
+                                <b-form-select v-model="to" :options="cities_to" class="input-form"></b-form-select>
                                 <img src="/images/check.png" class="check-form" v-if="to != ''">
                             </b-col>
                             <b-col>
@@ -353,7 +353,8 @@
             urgent: false,
             weight: "",
             description: "",
-
+            cities_from: [],
+            cities_to: [],
             countries: [],
             countries_object: [],
             means: [
@@ -442,6 +443,21 @@
             axios.get('/country/index')
                 .then((response) => {
                     this.countries_object=response.data;
+                    console.log(response)
+                })
+            axios.get('/city/index')
+                .then((response) => {
+                    this.cities_to=response.data;
+                    console.log(response)
+                })
+            axios.get('/city/index_from')
+                .then((response) => {
+                    this.cities_from=response.data;
+                    console.log(response)
+                })
+            axios.get('/delay/index')
+                .then((response) => {
+                    this.delays=response.data;
                     console.log(response)
                 })
             console.log('Component mounted.')
