@@ -105,14 +105,10 @@ th, td {
                     </b-table>
                 </b-col>
                 <b-col>
-
                     <b-table hover :items="expedients" :fields="fields_expedients">
                         <template #cell(mean_image)="data" class="mean-image">
                             <img src="/images/tourist.png" height="25px" v-if="data.item.type == 'sender'">
                             <img src="/images/stock.png" height="25px" v-if="data.item.type == 'traveler'">
-                        </template>
-                        <template #cell(contact)="data">
-                            <contact :expediter="data.item"></contact>
                         </template>
                         <template #cell(created_at)="data">
                             {{ data.item.created_at.substr(11, 5) }}
@@ -120,6 +116,9 @@ th, td {
                         <template #cell(type)="data">
                             <p v-if="data.item.type == 'traveler'">Voyageur</p>
                             <p v-if="data.item.type == 'sender'">Expéditeur</p>
+                        </template>
+                        <template #cell(contact)="data">
+                            <contact :transporter="data.item"></contact>
                         </template>
                     </b-table>
                 </b-col>
