@@ -32,7 +32,7 @@
                                 <img :src="'/storage/' + data.item.mean_image" height="25px">
                             </template>
                             <template #cell(contact)="data">
-                                <contact></contact>
+                                <contact :transporter="data.item"></contact>
                             </template>
                         </b-table>
                     </p>
