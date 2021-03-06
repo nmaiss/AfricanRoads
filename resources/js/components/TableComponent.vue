@@ -105,7 +105,23 @@ th, td {
                     </b-table>
                 </b-col>
                 <b-col>
-                    <b-table striped hover :items="expedients" :fields="fields_expedients"></b-table>
+
+                    <b-table hover :items="expedients" :fields="fields_expedients">
+                        <template #cell(mean_image)="data" class="mean-image">
+                            <img src="/images/tourist.png" height="25px" v-if="data.item.type == 'sender'">
+                            <img src="/images/stock.png" height="25px" v-if="data.item.type == 'traveler'">
+                        </template>
+                        <template #cell(contact)="data">
+                            <contact :expediter="data.item"></contact>
+                        </template>
+                        <template #cell(created_at)="data">
+                            {{ data.item.created_at.substr(11, 5) }}
+                        </template>
+                        <template #cell(type)="data">
+                            <p v-if="data.item.type == 'traveler'">Voyageur</p>
+                            <p v-if="data.item.type == 'sender'">Expéditeur</p>
+                        </template>
+                    </b-table>
                 </b-col>
             </b-row>
         </b-container>
@@ -157,7 +173,7 @@ th, td {
                     },
                     {
                         key: 'number_places',
-                        label: 'Disponnibilité'
+                        label: 'Disponibilité'
                         ,class: 'impair'
                     },
                     {
@@ -167,27 +183,38 @@ th, td {
                 ],
                 fields_expedients: [
                     {
-                        key: 'T',
+                        key: 'mean_image',
+                        label: 'T',
+                        class: 'mean-image-tr'
+                    },
+                    {
+                        key: 'created_at',
+                        label: 'Heure',
+                        class: 'pair'
                     },
                     {
                         key: 'type',
-                        label: 'Type'
+                        label: 'Type',
+                        class: 'impair'
                     },
                     {
                         key: 'from',
-                        label: 'Départ'
+                        label: 'Départ',
+                        class: 'pair'
                     },
                     {
                         key: 'to',
-                        label: 'Arrivée'
+                        label: 'Arrivée',
+                        class: 'impair'
                     },
                     {
                         key: 'delay',
-                        label: 'Délai'
+                        label: 'Délai',
+                        class: 'pair'
                     },
                     {
                         key: 'contact',
-                        label: 'Contact'
+                        label: ''
                     }
                 ]
             }
