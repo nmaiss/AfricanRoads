@@ -425,7 +425,7 @@
             max_step: 0,
             choosed_mean: "",
             hour: "",
-            number_places: 0,
+            number_places: '',
             name: "",
             first_name: "",
             company: "",

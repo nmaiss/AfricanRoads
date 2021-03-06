@@ -372,7 +372,7 @@
             choosed_mean: "",
             date: "",
             hour: "",
-            number_places: 0,
+            number_places: '',
             name: "",
             first_name: "",
             company: "",

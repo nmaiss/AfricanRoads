@@ -404,7 +404,7 @@ b-drop-down img{
             hour: "",
             from: "",
             to: "",
-            number_places: 0,
+            number_places: '',
             name: "",
             first_name: "",
             company: "",
