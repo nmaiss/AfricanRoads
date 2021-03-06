@@ -32,18 +32,18 @@
 
 .col-header{
     text-align: center;
-    height: 5vh;
-    line-height: 5vh;
+    height: 6vh;
+    line-height: 6vh;
     background-color: #B5D6A7;
     color: white;
     font-size: 20px;
     position: absolute;
-    top: -5vh;
     width: 90%;
-
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-100%);
+    transform: translate(-50%,-99%);
+    border: 5px solid #92C27A;
+    border-radius: 15px 15px 0px 0px;
 }
 
 </style>
