@@ -99,6 +99,9 @@ th, td {
                         <template #cell(contact)="data">
                             <contact :transporter="data.item"></contact>
                         </template>
+                        <template #cell(number_places)="data">
+                            {{ data.item.number_places }} places
+                        </template>
                     </b-table>
                 </b-col>
                 <b-col>
