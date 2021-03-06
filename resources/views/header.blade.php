@@ -80,10 +80,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        right: 120px;
         height: 10vh;
         position: absolute;
         font-size: 15px;
+        right: 0;
+    }
+
+    #bags-logo img{
+        height: 13vh;
+        margin-left: 25px;
     }
 
 </style>
@@ -109,7 +114,14 @@
                 </div>
             </div>
             <div id="navabr-bags">
-                <a href="https://www.bags-app.com/">Découvrez BAGS (colis par avions)</a>
+                <div id="bags-title">
+                    <a href="https://www.bags-app.com/">Découvrez BAGS (colis par avions)</a>
+                </div>
+                <div id="bags-logo">
+                    <a href="https://www.bags-app.com/">
+                        <img src="/images/bags.webp">
+                    </a>
+                </div>
             </div>
             <div id="navbar-title">
                 @if ($current_page == 'offers')

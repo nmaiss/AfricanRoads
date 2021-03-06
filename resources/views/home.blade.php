@@ -64,7 +64,7 @@
                                   Marchandise(s)
                               </div>
                               <div class="arrow-box">
-                                  <img src="/images/S.png">
+                                  <img src="/images/click.png">
                               </div>
                           </div>
                       </a>
@@ -103,7 +103,7 @@
                                   Voyager
                               </div>
                               <div class="arrow-box">
-                                  <img src="/images/S.png">
+                                  <img src="/images/click.png">
                               </div>
                           </div>
                       </a>
