@@ -91,17 +91,41 @@
         margin-left: 25px;
     }
 
+    #covid-message{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        display: inline-block;
+        font-size: 15px;
+        line-height: 15px!important;
+        background-color: white;
+        border-radius: 100px!important;
+        display: inline-block;
+        margin-top: 9px;
+    }
+
+    #covid-message div {
+        background-color: white;
+        color: #D9D9D9;
+        font-weight: bold;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
 </style>
 
 <div id="app-header">
     <div id="header">
         <div id="header-header">
             <div id="covid-message">
-                <p>
+                <div>
                     Important | COVID-19
-                </p>
+                </div>
             </div>
         </div>
+
         <div id="navbar-header">
             <div id="navbar-brand">
                 <div class="container">
