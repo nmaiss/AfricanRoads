@@ -96,9 +96,11 @@
             <div>2021</div>
         </div>
 
-        <div id="facebook">
-            <img src="/images/facebook.png">
-        </div>
+        <a href="https://www.facebook.com/bags.voyages/">
+            <div id="facebook">
+                <img src="/images/facebook.png">
+            </div>
+        </a>
 
         <div id="flag">
             <img :src="'/storage/' + countries_object[country - 1].country_flag">

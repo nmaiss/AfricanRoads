@@ -70,6 +70,17 @@ th, td {
     padding: 10px;
 }
 
+.table-title{
+
+}
+
+.filter-title{
+    right: 10%;
+    position: absolute;
+    top: -5vh;
+    color: #588F40;
+}
+
 </style>
 
 <template>
@@ -79,12 +90,15 @@ th, td {
         </div>
         <b-container class="content-tables" fluid>
             <b-row id="headers">
-                <b-col>
+                <b-col class="table-title">
                     <div class="col-header">
                         Transporteur(s)
                     </div>
+                    <div class="filter-title">
+                        <b-button v-b-toggle.collapse-1>Filtrer</b-button>
+                    </div>
                 </b-col>
-                <b-col>
+                <b-col class="table-title">
                     <div class="col-header">
                         Expéditeur(s)
                     </div>
@@ -92,7 +106,14 @@ th, td {
             </b-row>
             <b-row>
                 <b-col class="border-right">
-                    <b-table hover :items="transporters" :fields="fields_transporters">
+                    <b-collapse id="collapse-1" class="mt-2">
+                      <b-card>
+                        <p class="card-text">
+
+                        </p>
+                      </b-card>
+                    </b-collapse>
+                    <b-table hover :items="transporters" :fields="fields_transporters" primary-key="a" :tbody-transition-props="transProps">
                         <template #cell(mean_image)="data" class="mean-image">
                             <img :src="'/storage/' + data.item.mean_image" height="25px">
                         </template>
@@ -105,7 +126,7 @@ th, td {
                     </b-table>
                 </b-col>
                 <b-col>
-                    <b-table hover :items="expedients" :fields="fields_expedients">
+                    <b-table hover :items="expedients" :fields="fields_expedients" primary-key="a" :tbody-transition-props="transProps">
                         <template #cell(mean_image)="data" class="mean-image">
                             <img src="/images/tourist.png" height="25px" v-if="data.item.type == 'sender'">
                             <img src="/images/stock.png" height="25px" v-if="data.item.type == 'traveler'">
@@ -131,6 +152,9 @@ th, td {
     export default {
         data(){
             return {
+                transProps: {
+                  name: 'flip-list'
+                },
                 date: "",
                 type: "",
                 from: "",
@@ -147,33 +171,39 @@ th, td {
                     {
                         key: 'date',
                         label: 'Date',
-                        class: 'pair'
+                        class: 'pair',
+                        sortable: true
 
                     },
                     {
                         key: 'mean',
                         label: 'Type',
-                        class: 'impair'
+                        class: 'impair',
+                        sortable: true
                     },
                     {
                         key: 'from',
                         label: 'Départ',
-                        class: 'pair'
+                        class: 'pair',
+                        sortable: true
                     },
                     {
                         key: 'hour',
                         label: 'Heure',
-                        class: 'impair'
+                        class: 'impair',
+                        sortable: true
                     },
                     {
                         key: 'to',
                         label: 'Arrivée',
-                        class: 'pair'
+                        class: 'pair',
+                        sortable: true
                     },
                     {
                         key: 'number_places',
                         label: 'Disponibilité'
-                        ,class: 'impair'
+                        ,class: 'impair',
+                        sortable: true
                     },
                     {
                         key: 'contact',
@@ -189,27 +219,32 @@ th, td {
                     {
                         key: 'created_at',
                         label: 'Heure',
-                        class: 'pair'
+                        class: 'pair',
+                        sortable: true
                     },
                     {
                         key: 'type',
                         label: 'Type',
-                        class: 'impair'
+                        class: 'impair',
+                        sortable: true
                     },
                     {
                         key: 'from',
                         label: 'Départ',
-                        class: 'pair'
+                        class: 'pair',
+                        sortable: true
                     },
                     {
                         key: 'to',
                         label: 'Arrivée',
-                        class: 'impair'
+                        class: 'impair',
+                        sortable: true
                     },
                     {
                         key: 'delay',
                         label: 'Délai',
-                        class: 'pair'
+                        class: 'pair',
+                        sortable: true
                     },
                     {
                         key: 'contact',

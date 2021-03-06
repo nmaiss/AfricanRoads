@@ -119,11 +119,13 @@
 <div id="app-header">
     <div id="header">
         <div id="header-header">
-            <div id="covid-message">
-                <div>
-                    Important | COVID-19
+            <a href="https://www.who.int/fr">
+                <div id="covid-message">
+                    <div>
+                        Important | COVID-19
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
 
         <div id="navbar-header">
