@@ -1,12 +1,6 @@
 <style>
 
-    .text-center{
-        margin: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
+
 
     .menu-el img{
         height: 7vw;
