@@ -183,7 +183,7 @@ b-drop-down img{
     #home-menu{
         display: none;
     }
-    
+
 }
 
 </style>
@@ -285,7 +285,7 @@ b-drop-down img{
                         </b-row>
                     </b-container>
 
-                    <b-container fluid class="text-light text-center">
+                    <b-container fluid class="text-light text-center mt-3">
                         <b-row>
                             <b-col cols="auto" class="mr-auto p-3 ">
                                 <div class="last-step" @click="back()">
