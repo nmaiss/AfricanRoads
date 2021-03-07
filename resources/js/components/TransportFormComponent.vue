@@ -179,6 +179,13 @@ b-drop-down img{
     height: 100px;
 }
 
+@media (max-width: 1200px) {
+    #home-menu{
+        display: none;
+    }
+    
+}
+
 </style>
 
 <template>
