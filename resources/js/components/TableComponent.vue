@@ -104,6 +104,9 @@ th, td {
                     <div class="col-header">
                         Expéditeur(s)
                     </div>
+                    <div class="filter-title">
+                        <b-button v-b-toggle.collapse-2>Trier</b-button>
+                    </div>
                 </b-col>
             </b-row>
             <b-row>
@@ -120,9 +123,9 @@ th, td {
                                 <b-col class="impair"><div>Arrivée</div></b-col>
                               </b-row>
                               <b-row>
-                                <b-col><b-form-datepicker reset-button v-model="filter_date"></b-form-datepicker></b-col>
+                                <b-col><b-form-datepicker reset-button v-model="filter_date_trans"></b-form-datepicker></b-col>
                                 <b-col>
-                                    <b-form-select v-model="filter_type">
+                                    <b-form-select v-model="filter_type_trans">
                                         <option value=""></option>
                                         <option v-for="select_mean in means" :key="select_mean.id" :value="select_mean.name">
                                             {{ select_mean.name }}
@@ -130,7 +133,7 @@ th, td {
                                     </b-form-select>
                                 </b-col>
                                 <b-col>
-                                    <b-form-select v-model="filter_from">
+                                    <b-form-select v-model="filter_from_trans">
                                         <option value=""></option>
                                         <option v-for="select_from in from_cities" :key="select_from.id" :value="select_from.name">
                                             {{ select_from.name }}
@@ -138,7 +141,7 @@ th, td {
                                     </b-form-select>
                                 </b-col>
                                 <b-col>
-                                    <b-form-select v-model="filter_to">
+                                    <b-form-select v-model="filter_to_trans">
                                         <option value=""></option>
                                         <option v-for="select_to in to_cities" :key="select_to.id" :value="select_to.name">
                                             {{ select_to.name }}
@@ -163,7 +166,49 @@ th, td {
                     </b-table>
                 </b-col>
                 <b-col>
-                    <b-table hover :items="expedients" :fields="fields_expedients" primary-key="a" :tbody-transition-props="transProps">
+                    <b-collapse id="collapse-2" class="mt-2">
+                      <b-card>
+                        <p class="card-text text-center">
+                            <div class="text-center collapse-title mb-3">Trier par...</div>
+                            <b-container class="bv-example-row text-center">
+                              <b-row class="mb-2">
+                                <b-col class="pair"><div>Date</div></b-col>
+                                <b-col class="impair"><div>Type</div></b-col>
+                                <b-col class="pair"><div>Départ</div></b-col>
+                                <b-col class="impair"><div>Délai</div></b-col>
+                              </b-row>
+                              <b-row>
+                                <b-col><b-form-datepicker reset-button v-model="filter_date_exp"></b-form-datepicker></b-col>
+                                <b-col>
+                                    <b-form-select v-model="filter_type_exp">
+                                        <option value=""></option>
+                                        <option v-for="select_mean in means" :key="select_mean.id" :value="select_mean.name">
+                                            {{ select_mean.name }}
+                                        </option>
+                                    </b-form-select>
+                                </b-col>
+                                <b-col>
+                                    <b-form-select v-model="filter_from_exp">
+                                        <option value=""></option>
+                                        <option v-for="select_from in from_cities" :key="select_from.id" :value="select_from.name">
+                                            {{ select_from.name }}
+                                        </option>
+                                    </b-form-select>
+                                </b-col>
+                                <b-col>
+                                    <b-form-select v-model="filter_to_exp">
+                                        <option value=""></option>
+                                        <option v-for="select_to in to_cities" :key="select_to.id" :value="select_to.name">
+                                            {{ select_to.name }}
+                                        </option>
+                                    </b-form-select>
+                                </b-col>
+                              </b-row>
+                            </b-container>
+                        </p>
+                      </b-card>
+                    </b-collapse>
+                    <b-table hover :items="filtered_exporters" :fields="fields_expedients" primary-key="a" :tbody-transition-props="transProps">
                         <template #cell(mean_image)="data" class="mean-image">
                             <img src="/images/tourist.png" height="25px" v-if="data.item.type == 'sender'">
                             <img src="/images/stock.png" height="25px" v-if="data.item.type == 'traveler'">
@@ -192,10 +237,14 @@ th, td {
                 from_cities: [],
                 to_cities: [],
                 means: [],
-                filter_date: '',
-                filter_type: '',
-                filter_from: '',
-                filter_to: '',
+                filter_date_trans: '',
+                filter_type_trans: '',
+                filter_from_trans: '',
+                filter_to_trans: '',
+                filter_date_exp: '',
+                filter_type_exp: '',
+                filter_from_exp: '',
+                filter_delay_exp: '',
                 transProps: {
                   name: 'flip-list'
                 },
@@ -295,7 +344,9 @@ th, td {
                         label: ''
                     }
                 ],
-                filtered_trans: []
+                filtered_trans: [],
+                filtered_exp: [],
+                delays: []
             }
         },
         methods: {
@@ -317,23 +368,41 @@ th, td {
             axios.get('/city/index').then(response => (this.to_cities = response.data))
             axios.get('/city/index_from').then(response => (this.from_cities = response.data))
             axios.get('/mean/index').then(response => (this.means = response.data))
+            axios.get('/delay/index').then(response => (this.delays = response.data))
         },
         computed: {
             filtered_transporters () {
                 this.filtered_trans = this.transporters;
-                this.filtered_trans = this.filter_date
-                ? this.filtered_trans.filter(item => item.date.includes(this.filter_date))
+                this.filtered_trans = this.filter_date_trans
+                ? this.filtered_trans.filter(item => item.date.includes(this.filter_date_trans))
                 :this.filtered_trans;
-                this.filtered_trans =  this.filter_type
-                ? this.filtered_trans.filter(item => item.mean.includes(this.filter_type))
+                this.filtered_trans =  this.filter_type_trans
+                ? this.filtered_trans.filter(item => item.mean.includes(this.filter_type_trans))
                 :this.filtered_trans;
-                this.filtered_trans =  this.filter_to
-                ? this.filtered_trans.filter(item => item.from.includes(this.filter_to))
+                this.filtered_trans =  this.filter_to_trans
+                ? this.filtered_trans.filter(item => item.from.includes(this.filter_to_trans))
                 :this.filtered_trans;
-                this.filtered_trans =  this.filter_from
-                ? this.filtered_trans.filter(item => item.to.includes(this.filter_from))
+                this.filtered_trans =  this.filter_from_trans
+                ? this.filtered_trans.filter(item => item.to.includes(this.filter_from_trans))
                 :this.filtered_trans;
                 return this.filtered_trans;
+            },
+
+            filtered_exporters () {
+                this.filtered_exp = this.expedients;
+                this.filtered_exp = this.filter_date_exp
+                ? this.filtered_exp.filter(item => item.date.includes(this.filter_date_exp))
+                :this.filtered_exp;
+                this.filtered_exp =  this.filter_type_exp
+                ? this.filtered_exp.filter(item => item.mean.includes(this.filter_type_exp))
+                :this.filtered_exp;
+                this.filtered_exp =  this.filter_delay_exp
+                ? this.filtered_exp.filter(item => item.from.includes(this.filter_delay_exp))
+                :this.filtered_exp;
+                this.filtered_exp =  this.filter_from_exp
+                ? this.filtered_exp.filter(item => item.to.includes(this.filter_from_exp))
+                :this.filtered_exp;
+                return this.filtered_exp;
             }
         }
     }
