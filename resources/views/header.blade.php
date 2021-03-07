@@ -114,6 +114,33 @@
         padding-right: 35px;
     }
 
+    @media (max-width: 800px) {
+        #header-header{
+            display: none;
+        }
+        #navbar-bags{
+            display: none!important;
+        }
+
+        #navbar-bags img{
+            display: none!important;
+        }
+
+        #navbar-brand{
+            left: 0;
+            display: none;
+        }
+
+        #bags-logo{
+            display: none;
+        }
+
+        #bags-title{
+            display: none;
+        }
+
+    }
+
 </style>
 
 <div id="app-header">

@@ -17,6 +17,12 @@
     margin-right: 30px;
 }
 
+@media (max-width: 800px) {
+    .box{
+        height: 90vw;
+    }
+}
+
 </style>
 
 <div id="means-home">
@@ -33,7 +39,7 @@
 
 <div class="container-fluid">
     <div class="row">
-      <div class="col">
+      <div class="col-sm-6">
           <div class="box">
               <div class="header-box">
                   Transporter
@@ -72,7 +78,7 @@
               </div>
           </div>
       </div>
-      <div class="col">
+      <div class="col-sm-6">
           <div class="box">
               <div class="header-box">
                   Envoyer ou Voyager
