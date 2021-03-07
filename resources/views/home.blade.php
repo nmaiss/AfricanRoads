@@ -19,7 +19,7 @@
 
 @media (max-width: 800px) {
     .box{
-        height: 90vw;
+        height: 120vw;
     }
 }
 
