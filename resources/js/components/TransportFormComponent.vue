@@ -248,7 +248,11 @@ b-drop-down img{
                     <b-container class="bv-example-row bv-example-row-flex-cols infos-form">
                         <b-row class="mb-3">
                             <b-col>
-                                <b-form-select v-model="from" :options="countries" class="input-form"></b-form-select>
+                                <b-form-select v-model="from" class="input-form">
+                                    <option v-for="select_from in from_cities" :key="select_from.id" :value="select_from.name">
+                                        {{ select_from.name }}
+                                    </option>
+                                </b-form-select>
                                 <img src="/images/check.png" class="check-form" v-if="from != ''">
                             </b-col>
                             <b-col>
@@ -256,7 +260,11 @@ b-drop-down img{
                                 <img src="/images/check.png" class="check-form" v-if="date != ''">
                             </b-col>
                             <b-col>
-                                <b-form-select v-model="to" :options="countries" class="input-form"></b-form-select>
+                                <b-form-select v-model="to" class="input-form">
+                                    <option v-for="select_to in to_cities" :key="select_to.id" :value="select_to.name">
+                                        {{ select_to.name }}
+                                    </option>
+                                </b-form-select>
                                 <img src="/images/check.png" class="check-form" v-if="to != ''">
                             </b-col>
                         </b-row>
@@ -317,15 +325,6 @@ b-drop-down img{
                         <b-col align-self="stretch">
                             <b-form-input v-model="company" class="input-form big-form"  placeholder="Entreprise"></b-form-input>
                             <img src="/images/check.png" class="check-form" v-if="company != ''">
-                        </b-col>
-                        <b-col align-self="stretch">
-                            <b-dropdown text="Indicatif" class="input-form big-form" v-model="country">
-                                <b-dropdown-item v-model="country" v-bind:value="country_object.id" v-for="country_object in countries_object" :key="country_object.id">
-                                  <img :src="'/storage/' + country_object.country_flag" height="50px">
-                                  {{ country_object.telephone_code }}
-                                </b-dropdown-item>
-                            </b-dropdown>
-
                         </b-col>
                         <b-col align-self="stretch">
                             <b-form-input v-model="phone_number" class="input-form big-form"  placeholder="Numéro de téléphone"></b-form-input>
@@ -410,7 +409,9 @@ b-drop-down img{
             company: "",
             country: "",
             phone_number: "",
-            typee: this.type
+            typee: this.type,
+            to_cities: [],
+            from_cities: []
           }
         },
         methods: {
@@ -476,6 +477,8 @@ b-drop-down img{
                     this.means=response.data;
                     console.log(response)
                 })
+            axios.get('/city/index').then(response => (this.to_cities = response.data))
+            axios.get('/city/index_from').then(response => (this.from_cities = response.data))
             console.log('Component mounted.')
         }
     }

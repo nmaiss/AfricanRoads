@@ -258,11 +258,19 @@
                     <b-container class="bv-example-row bv-example-row-flex-cols infos-form">
                         <b-row class="mb-3">
                             <b-col>
-                                <b-form-select v-model="from" :options="countries" class="input-form"></b-form-select>
+                                <b-form-select v-model="from" class="input-form">
+                                    <option v-for="select_from in cities_from" :key="select_from.id" :value="select_from.name">
+                                        {{ select_from.name }}
+                                    </option>
+                                </b-form-select>
                                 <img src="/images/check.png" class="check-form" v-if="from != ''">
                             </b-col>
                             <b-col>
-                                <b-form-select v-model="to" :options="countries" class="input-form"></b-form-select>
+                                <b-form-select v-model="to" class="input-form">
+                                    <option v-for="select_to in cities_to" :key="select_to.id" :value="select_to.name">
+                                        {{ select_to.name }}
+                                    </option>
+                                </b-form-select>
                                 <img src="/images/check.png" class="check-form" v-if="to != ''">
                             </b-col>
                             <b-col>
@@ -336,9 +344,6 @@
                               </b-col>
                           </b-row>
                           <b-col align-self="stretch">
-                              <b-form-select :options="countries" class="input-form big-form"></b-form-select>
-                          </b-col>
-                          <b-col align-self="stretch">
                               <b-form-input v-model="phone_number" class="input-form big-form"  placeholder="Numéro de téléphone"></b-form-input>
                               <img src="/images/check.png" class="check-form" v-if="phone_number != ''">
                           </b-col>
@@ -411,7 +416,8 @@
             transport: false,
             weight: "",
             description: "",
-
+            cities_from: [],
+            cities_to: [],
             countries: [],
             countries_object: [],
             means: [
@@ -507,6 +513,16 @@
             axios.get('/country/index')
                 .then((response) => {
                     this.countries_object=response.data;
+                    console.log(response)
+                })
+            axios.get('/city/index')
+                .then((response) => {
+                    this.cities_to=response.data;
+                    console.log(response)
+                })
+            axios.get('/city/index_from')
+                .then((response) => {
+                    this.cities_from=response.data;
                     console.log(response)
                 })
             console.log('Component mounted.')

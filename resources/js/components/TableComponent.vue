@@ -196,10 +196,10 @@ th, td {
                                     </b-form-select>
                                 </b-col>
                                 <b-col>
-                                    <b-form-select v-model="filter_to_exp">
+                                    <b-form-select v-model="filter_delay_exp">
                                         <option value=""></option>
-                                        <option v-for="select_to in to_cities" :key="select_to.id" :value="select_to.name">
-                                            {{ select_to.name }}
+                                        <option v-for="select_delay in delays" :key="select_delay.id" :value="select_delay.name">
+                                            {{ select_delay.name }}
                                         </option>
                                     </b-form-select>
                                 </b-col>
@@ -379,11 +379,11 @@ th, td {
                 this.filtered_trans =  this.filter_type_trans
                 ? this.filtered_trans.filter(item => item.mean.includes(this.filter_type_trans))
                 :this.filtered_trans;
-                this.filtered_trans =  this.filter_to_trans
-                ? this.filtered_trans.filter(item => item.from.includes(this.filter_to_trans))
-                :this.filtered_trans;
                 this.filtered_trans =  this.filter_from_trans
-                ? this.filtered_trans.filter(item => item.to.includes(this.filter_from_trans))
+                ? this.filtered_trans.filter(item => item.from.includes(this.filter_from_trans))
+                :this.filtered_trans;
+                this.filtered_trans =  this.filter_to_trans
+                ? this.filtered_trans.filter(item => item.to.includes(this.filter_to_trans))
                 :this.filtered_trans;
                 return this.filtered_trans;
             },
@@ -399,8 +399,8 @@ th, td {
                 this.filtered_exp =  this.filter_delay_exp
                 ? this.filtered_exp.filter(item => item.from.includes(this.filter_delay_exp))
                 :this.filtered_exp;
-                this.filtered_exp =  this.filter_from_exp
-                ? this.filtered_exp.filter(item => item.to.includes(this.filter_from_exp))
+                this.filtered_exp =  this.filter_delay_exp
+                ? this.filtered_exp.filter(item => item.delay.includes(this.filter_delay_exp))
                 :this.filtered_exp;
                 return this.filtered_exp;
             }

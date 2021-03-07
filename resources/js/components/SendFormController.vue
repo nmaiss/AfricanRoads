@@ -212,11 +212,19 @@
                     <b-container class="bv-example-row bv-example-row-flex-cols infos-form">
                         <b-row class="mb-3">
                             <b-col>
-                                <b-form-select v-model="from" :options="cities_from" class="input-form"></b-form-select>
+                                <b-form-select v-model="from" class="input-form">
+                                    <option v-for="select_from in cities_from" :key="select_from.id" :value="select_from.name">
+                                        {{ select_from.name }}
+                                    </option>
+                                </b-form-select>
                                 <img src="/images/check.png" class="check-form" v-if="from != ''">
                             </b-col>
                             <b-col>
-                                <b-form-select v-model="to" :options="cities_to" class="input-form"></b-form-select>
+                                <b-form-select v-model="to" class="input-form">
+                                    <option v-for="select_to in cities_to" :key="select_to.id" :value="select_to.name">
+                                        {{ select_to.name }}
+                                    </option>
+                                </b-form-select>
                                 <img src="/images/check.png" class="check-form" v-if="to != ''">
                             </b-col>
                             <b-col>
@@ -230,7 +238,11 @@
                         <b-row>
                             <b-col></b-col>
                             <b-col>
-                                <b-form-select v-model="delay" :options="delays" class="input-form"></b-form-select>
+                                <b-form-select v-model="delay" class="input-form">
+                                    <option v-for="select_delay in delays" :key="select_delay.id" :value="select_delay.name">
+                                        {{ select_delay.name }}
+                                    </option>
+                                </b-form-select>
                                 <img src="/images/check.png" class="check-form" v-if="delay != ''">
                             </b-col>
                             <b-col></b-col>
@@ -278,9 +290,6 @@
                                   <img src="/images/check.png" class="check-form" v-if="first_name != ''">
                               </b-col>
                           </b-row>
-                          <b-col align-self="stretch">
-                              <b-form-select :options="countries" class="input-form big-form"></b-form-select>
-                          </b-col>
                           <b-col align-self="stretch">
                               <b-form-input v-model="phone_number" class="input-form big-form"  placeholder="Numéro de téléphone"></b-form-input>
                               <img src="/images/check.png" class="check-form" v-if="phone_number != ''">
