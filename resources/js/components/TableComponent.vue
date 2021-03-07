@@ -70,8 +70,10 @@ th, td {
     padding: 10px;
 }
 
-.table-title{
-
+.collapse-title{
+    font-size: 20px;
+    color: #8EC277;
+    font-weight: bold;
 }
 
 .filter-title{
@@ -95,7 +97,7 @@ th, td {
                         Transporteur(s)
                     </div>
                     <div class="filter-title">
-                        <b-button v-b-toggle.collapse-1>Filtrer</b-button>
+                        <b-button v-b-toggle.collapse-1>Trier</b-button>
                     </div>
                 </b-col>
                 <b-col class="table-title">
@@ -108,12 +110,47 @@ th, td {
                 <b-col class="border-right">
                     <b-collapse id="collapse-1" class="mt-2">
                       <b-card>
-                        <p class="card-text">
-
+                        <p class="card-text text-center">
+                            <div class="text-center collapse-title mb-3">Trier par...</div>
+                            <b-container class="bv-example-row text-center">
+                              <b-row class="mb-2">
+                                <b-col class="pair"><div>Date</div></b-col>
+                                <b-col class="impair"><div>Type</div></b-col>
+                                <b-col class="pair"><div>Départ</div></b-col>
+                                <b-col class="impair"><div>Arrivée</div></b-col>
+                              </b-row>
+                              <b-row>
+                                <b-col><b-form-datepicker v-model="filter_date"></b-form-datepicker></b-col>
+                                <b-col>
+                                    <b-form-select v-model="filter_type">
+                                        <option value=""></option>
+                                        <option v-for="select_mean in means" :key="select_mean.id" :value="select_mean.name">
+                                            {{ select_mean.name }}
+                                        </option>
+                                    </b-form-select>
+                                </b-col>
+                                <b-col>
+                                    <b-form-select v-model="filter_from">
+                                        <option value=""></option>
+                                        <option v-for="select_from in from_cities" :key="select_from.id" :value="select_from.name">
+                                            {{ select_from.name }}
+                                        </option>
+                                    </b-form-select>
+                                </b-col>
+                                <b-col>
+                                    <b-form-select v-model="filter_to">
+                                        <option value=""></option>
+                                        <option v-for="select_to in to_cities" :key="select_to.id" :value="select_to.name">
+                                            {{ select_to.name }}
+                                        </option>
+                                    </b-form-select>
+                                </b-col>
+                              </b-row>
+                            </b-container>
                         </p>
                       </b-card>
                     </b-collapse>
-                    <b-table hover :items="transporters" :fields="fields_transporters" primary-key="a" :tbody-transition-props="transProps">
+                    <b-table hover :items="filtered_transporters" :fields="fields_transporters" primary-key="a" :tbody-transition-props="transProps">
                         <template #cell(mean_image)="data" class="mean-image">
                             <img :src="'/storage/' + data.item.mean_image" height="25px">
                         </template>
@@ -152,6 +189,13 @@ th, td {
     export default {
         data(){
             return {
+                from_cities: [],
+                to_cities: [],
+                means: [],
+                filter_date: '',
+                filter_type: '',
+                filter_from: '',
+                filter_to: '',
                 transProps: {
                   name: 'flip-list'
                 },
@@ -250,7 +294,8 @@ th, td {
                         key: 'contact',
                         label: ''
                     }
-                ]
+                ],
+                filtered_trans: []
             }
         },
         methods: {
@@ -268,6 +313,28 @@ th, td {
                 response => (this.transporters = response.data)
             )
             axios.get('/travel/get').then(response => (this.expedients = response.data))
+
+            axios.get('/city/index').then(response => (this.to_cities = response.data))
+            axios.get('/city/index_from').then(response => (this.from_cities = response.data))
+            axios.get('/mean/index').then(response => (this.means = response.data))
+        },
+        computed: {
+            filtered_transporters () {
+                this.filtered_trans = this.transporters;
+                this.filtered_trans = this.filter_date
+                ? this.filtered_trans.filter(item => item.date.includes(this.filter_date))
+                :this.filtered_trans;
+                this.filtered_trans =  this.filter_type
+                ? this.filtered_trans.filter(item => item.mean.includes(this.filter_type))
+                :this.filtered_trans;
+                this.filtered_trans =  this.filter_to
+                ? this.filtered_trans.filter(item => item.from.includes(this.filter_to))
+                :this.filtered_trans;
+                this.filtered_trans =  this.filter_from
+                ? this.filtered_trans.filter(item => item.to.includes(this.filter_from))
+                :this.filtered_trans;
+                return this.filtered_trans;
+            }
         }
     }
 </script>

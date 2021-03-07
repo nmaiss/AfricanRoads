@@ -223,6 +223,10 @@
     height: 100px;
 }
 
+.transport-check-form .no-check {
+    width: 80px;
+}
+
 </style>
 
 <template>
@@ -282,7 +286,7 @@
                                 <div class="no-form" @click="can_transport()">
                                     Non
                                 </div>
-                                <img src="/images/check.png" class="transport-check-form" v-if="transport === false">
+                                <img src="/images/Check rouge.png" class="transport-check-form no-check" v-if="transport === false">
                             </b-col>
                         </b-row>
                     </b-container>
