@@ -1,7 +1,12 @@
 <style>
 
 body{
-    background: url("/images/Prologue.jpg") no-repeat center center fixed;
+    background: url("/images/Prologue.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+#copyright{
+    color: white!important;
 }
 
 

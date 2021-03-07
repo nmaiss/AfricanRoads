@@ -1,23 +1,26 @@
 <style>
 
+    .text-center{
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
     .menu-el img{
-        height: 100px;
-        margin-bottom: 10px;
+        height: 7vw;
+        margin-bottom: 1vw;
     }
 
     .menu-title{
-        font-size: 25px;
+        font-size: 1.5vw;
         color: white;
     }
 
-    .menu{
-        margin-top: 30px;
-    }
-
     .menu-el{
-        margin-bottom: 30px;
         display: inline-block;
-        margin-left: 70px;
+        margin-left: 3vw;
         text-align: center;
     }
 
@@ -25,90 +28,50 @@
         text-decoration: none!important;
     }
 
-    .custom-select-2{
-        height: 15vh;
-        width: 40vw;
-        text-align-last: center;
-        background-color: #FFFFFF;
-        color: #D9D9D9;
-        font-size: 30px;
-        font-weight: bold;
-        border-radius: 30px;
+    @media only screen and (max-width: 550px) {
+        .menu-title{
+            font-size: 5vw;
+        }
+        .menu-el img{
+            height: 20vw;
+            margin-bottom: 1vw;
+        }
+
+        .menu-el{
+            margin-bottom: 5vw;
+        }
     }
 
-    #facebook {
-        position: absolute;
-        bottom: 20px;
-        right: 40px;
-    }
 
-    #facebook img {
-        height: 150px;
-    }
-
-    #year {
-        position: absolute;
-        top: 20px;
-        right: 40px;
-        text-align: center;
-        background-color: white;
-        color: #E0E0E0;
-        border-radius: 15px;
-        font-weight: bold;
-    }
-
-    #year div{
-        padding-top: 20px;
-        padding-bottom: 20px;
-        padding-left: 30px;
-        padding-right: 30px;
-        font-size: 30px;
-    }
 
 </style>
 
 <template>
     <div>
-        <div class="menu">
-            <div class="menu-el">
-                <a href="/home">
-                    <div class="menu-image">
-                        <img src="/images/home-icon-silhouette.png">
-                    </div>
-                    <div class="menu-title">
-                        Page d'accueil
-                    </div>
-                </a>
-            </div>
-            <div class="menu-el">
-                <a href="/offers">
-                    <div class="menu-image">
-                        <img src="/images/megaphone.png">
-                    </div>
-                    <div class="menu-title">
-                        Consulter les annonces
-                    </div>
-                </a>
+        <div class="text-center">
+            <div class="menu">
+                <div class="menu-el">
+                    <a href="/home">
+                        <div class="menu-image">
+                            <img src="/images/home-icon-silhouette.png">
+                        </div>
+                        <div class="menu-title">
+                            Page d'accueil
+                        </div>
+                    </a>
+                </div>
+                <div class="menu-el">
+                    <a href="/offers">
+                        <div class="menu-image">
+                            <img src="/images/megaphone.png">
+                        </div>
+                        <div class="menu-title">
+                            Consulter les annonces
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
-
-        <div id="year">
-            <div>2021</div>
-        </div>
-
-        <a href="https://www.facebook.com/bags.voyages/">
-            <div id="facebook">
-                <img src="/images/facebook.png">
-            </div>
-        </a>
-
-        <div id="flag">
-            <img :src="'/storage/' + countries_object[country - 1].country_flag">
-        </div>
-        <b-form-select id="selection" v-model="country" class="custom-select-2">
-          <option v-bind:value="country_object.id" v-for="country_object in countries_object">{{ country_object.name }}
-          </option>
-        </b-form-select>
     </div>
 </template>
 
@@ -125,17 +88,6 @@ export default{
         }
     },
     mounted() {
-        axios.get('/country/index')
-            .then((response) => {
-                this.countries=response.data.map(item=>item.id);
-                this.countries_flags=response.data.map(item=>item.country_flag);
-                console.log(response)
-            });
-        axios.get('/country/index')
-            .then((response) => {
-                this.countries_object=response.data;
-                console.log(response)
-            })
         console.log('Component mounted.')
     }
 }
