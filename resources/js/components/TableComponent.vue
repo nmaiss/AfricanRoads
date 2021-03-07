@@ -120,7 +120,7 @@ th, td {
                                 <b-col class="impair"><div>Arrivée</div></b-col>
                               </b-row>
                               <b-row>
-                                <b-col><b-form-datepicker v-model="filter_date"></b-form-datepicker></b-col>
+                                <b-col><b-form-datepicker reset-button v-model="filter_date"></b-form-datepicker></b-col>
                                 <b-col>
                                     <b-form-select v-model="filter_type">
                                         <option value=""></option>
