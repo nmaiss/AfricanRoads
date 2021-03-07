@@ -5,7 +5,7 @@
         position:absolute;
         bottom: 10;
         width: 100%;
-
+        font-size: 1.2em;
     }
 </style>
 

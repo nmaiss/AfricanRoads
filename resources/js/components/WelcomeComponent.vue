@@ -38,7 +38,7 @@
         }
 
         .menu-el{
-            margin-bottom: 5vw;
+            margin-bottom: 7vw;
         }
     }
 
