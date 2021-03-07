@@ -1,8 +1,8 @@
-@include('header', ['current_page' => "home"])
-
 @extends('app')
 
 @section('content')
+
+@include('header', ['current_page' => "home"])
 
 <style>
 
@@ -127,9 +127,8 @@
       </div>
     </div>
 </div>
-@endsection
-
 @include('footer')
+@endsection
 
 <style>
 
