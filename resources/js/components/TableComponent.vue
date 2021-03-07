@@ -36,7 +36,7 @@
     line-height: 5vh;
     background-color: #B5D6A7;
     color: white;
-    font-size: 25px;
+    font-size: 2em;
     position: absolute;
     width: 90%;
     top: 50%;
@@ -45,6 +45,12 @@
     border: 5px solid #92C27A;
     border-radius: 15px 15px 0px 0px;
     font-weight: bold;
+}
+
+@media (max-width: 800px){
+    .col-header{
+        font-size: 1em;
+    }
 }
 
 th, td {

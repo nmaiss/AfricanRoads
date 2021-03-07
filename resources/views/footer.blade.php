@@ -5,7 +5,9 @@
         color: gray;
         width: 100%;
         font-size: 1.2em;
-        margin-top: auto;
+        bottom: 0;
+        bottom: 10px;
+        position: absolute;
     }
 </style>
 

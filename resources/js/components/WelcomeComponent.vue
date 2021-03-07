@@ -1,6 +1,9 @@
 <style>
 
-
+    .centered-icons{
+        margin-top: 50vh;
+        transform: translateY(-50%);
+    }
 
     .menu-el img{
         height: 7vw;
@@ -42,7 +45,7 @@
 
 <template>
     <div>
-        <div class="text-center">
+        <div class="centered-icons">
             <div class="menu">
                 <div class="menu-el">
                     <a href="/home">
