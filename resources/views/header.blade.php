@@ -139,6 +139,11 @@
             display: none;
         }
 
+        #header{
+            margin-bottom: 40px;
+            height: 10vh;
+        }
+
     }
 
 </style>

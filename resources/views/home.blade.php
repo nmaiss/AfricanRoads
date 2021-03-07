@@ -21,6 +21,10 @@
     .box{
         height: 110vw;
     }
+
+    #means-home{
+        display: none;
+    }
 }
 
 </style>
