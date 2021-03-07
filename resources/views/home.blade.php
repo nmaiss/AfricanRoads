@@ -22,6 +22,10 @@
         height: 110vw;
     }
 
+    .child-box{
+        font-size: 20px;
+    }
+
     #means-home{
         display: none;
     }
