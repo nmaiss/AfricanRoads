@@ -275,7 +275,7 @@ b-drop-down img{
                                 <img src="/images/check.png" class="check-form" v-if="from != ''">
                             </b-col>
                             <b-col>
-                                <b-form-datepicker id="datepicker" v-model="date" class="input-form"></b-form-datepicker>
+                                <b-form-datepicker id="datepicker" v-model="date" placeholder="" class="input-form"></b-form-datepicker>
                                 <img src="/images/check.png" class="check-form" v-if="date != ''">
                             </b-col>
                             <b-col>
