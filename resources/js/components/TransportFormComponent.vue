@@ -97,6 +97,7 @@
     border-radius: 10px;
     height: 45px;
     text-align: center;
+    width: 100%;
 }
 
 .btn-secondary{
@@ -290,7 +291,7 @@ b-drop-down img{
                         <b-row>
                             <b-col></b-col>
                             <b-col>
-                                <b-form-timepicker v-model="hour" locale="fr" class="input-form"></b-form-timepicker>
+                                <b-form-timepicker v-model="hour" locale="fr" class="input-form" button-only></b-form-timepicker>
                                 <img src="/images/check.png" class="check-form" v-if="hour != ''">
                             </b-col>
                             <b-col></b-col>
