@@ -24,11 +24,52 @@
             body {
                 font-family: 'Nunito';
             }
+
+            #wrapper{
+                min-height: 93vh; /* will cover the 100% of viewport */
+                overflow: hidden;
+                display: block;
+                position: relative;
+                padding-bottom: 200px;
+            }
+
+
+                #copyright{
+                    text-align: center;
+                    color: gray;
+                    width: 100%;
+                    font-size: 1.2em;
+                }
+
+                .animation{
+                  height:0px;
+                  width:1px;
+                  border-bottom:1px solid #000;
+
+                  -webkit-animation: increase 3s;
+                  -moz-animation:    increase 3s;
+                  -o-animation:      increase 3s;
+                  animation:         increase 3s;
+                  animation-fill-mode: forwards;
+                }
+
+                @keyframes increase {
+                100% {
+                    width: 100%;
+                }
+            }
         </style>
     </head>
     <body>
         <div id="wrapper">
             @yield('content')
         </div>
+        <footer class="footer mt-auto py-3 bg-light">
+          <div id="copyright">
+              <div class="animation mb-1"></div>
+              <div class="mt-2 mb-1">African Roads By HERITAGES © 2021</div>
+          </div>
+        </footer>
+        <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     </body>
 </html>

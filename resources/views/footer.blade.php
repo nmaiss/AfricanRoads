@@ -1,12 +1,11 @@
 <style>
 
+
     #copyright{
         text-align: center;
         color: gray;
         width: 100%;
-        font-size: 1.2em;
-        bottom: 0;
-        position: absolute;
+        font-size: 1.2em
     }
 
     .animation{
@@ -29,7 +28,11 @@
 
 </style>
 
-<div id="copyright">
-<div class="animation mb-1"></div>
-<div class="mt-2 mb-1">African Roads By HERITAGES © 2021</div>
-</div>
+<footer class="footer mt-auto py-3 bg-light">
+  <div class="container">
+      <div id="copyright">
+      <div class="animation mb-1"></div>
+      <div class="mt-2 mb-1">African Roads By HERITAGES © 2021</div>
+      </div>
+  </div>
+</footer>
