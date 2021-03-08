@@ -51,7 +51,10 @@
     .col-header{
         font-size: 1em;
         text-align: left;
-        left: 200px;
+    }
+
+    .table-title{
+        margin-right: 20px;
     }
 }
 
