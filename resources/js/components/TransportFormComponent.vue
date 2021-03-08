@@ -128,6 +128,18 @@
     font-weight: bold;
 }
 
+@media (max-width: 800px){
+    .warning-message{
+        font-size: 10px!important;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .thank-container{
+        font-size: 10px!important;
+    }
+}
+
 .warning {
     color: #E06666;
 }
@@ -365,7 +377,7 @@ b-drop-down img{
           </b-card>
       </div>
       <div v-if="max_step === 3">
-          <div class="container">
+          <div class="container thank-container">
               <div class="row justify-content-center">
                   <div class="col-md-8">
                       <div class="thanks-message mb-4">Merci, votre annonce est postée !</div>
