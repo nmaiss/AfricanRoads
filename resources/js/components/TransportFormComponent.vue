@@ -199,6 +199,13 @@ b-drop-down img{
 
 }
 
+@media (max-width: 800px) {
+    .warning-message{
+        display: none;
+    }
+
+}
+
 </style>
 
 <template>
