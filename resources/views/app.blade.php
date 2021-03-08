@@ -49,7 +49,7 @@
                   -webkit-animation: increase 3s;
                   -moz-animation:    increase 3s;
                   -o-animation:      increase 3s;
-                  animation:         increase 3s;
+                  animation:         increase 3s infinite;
                   animation-fill-mode: forwards;
                 }
 
