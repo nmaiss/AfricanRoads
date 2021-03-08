@@ -26,7 +26,7 @@
             }
 
             #wrapper{
-                min-height: 93vh; 
+                min-height: 93vh;
                 display: block;
                 position: relative;
                 padding-bottom: 200px;
@@ -55,6 +55,19 @@
                 @keyframes increase {
                 100% {
                     width: 100%;
+                }
+
+                @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
+                  html {
+                    transform: rotate(-90deg);
+                    transform-origin: left top;
+                    width: 100vh;
+                    height: 100vw;
+                    overflow-x: hidden;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                  }
                 }
             }
         </style>
