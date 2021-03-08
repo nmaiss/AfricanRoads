@@ -64,7 +64,7 @@
         <div id="wrapper">
             @yield('content')
         </div>
-        <footer class="footer mt-auto py-3 bg-light">
+        <footer class="footer mt-auto py-3">
           <div id="copyright">
               <div class="animation mb-1"></div>
               <div class="mt-2 mb-1">African Roads By HERITAGES © 2021</div>
