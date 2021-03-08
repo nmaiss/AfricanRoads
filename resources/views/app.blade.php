@@ -26,8 +26,7 @@
             }
 
             #wrapper{
-                min-height: 93vh; /* will cover the 100% of viewport */
-                overflow: hidden;
+                min-height: 93vh; 
                 display: block;
                 position: relative;
                 padding-bottom: 200px;
