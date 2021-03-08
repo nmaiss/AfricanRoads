@@ -50,6 +50,7 @@
 @media (max-width: 800px){
     .col-header{
         font-size: 1em;
+        text-align: left;
     }
 }
 
