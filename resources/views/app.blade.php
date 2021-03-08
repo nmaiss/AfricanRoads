@@ -64,7 +64,6 @@
                 transform-origin: left top!important;
                 width: 100vh!important;
                 height: 100vw;
-                overflow-x: hidden;
                 position: absolute;
                 top: 100%;
                 left: 0;
