@@ -135,7 +135,7 @@ th, td {
                                   <b-col class="impair"><div>Arrivée</div></b-col>
                                 </b-row>
                                 <b-row>
-                                  <b-col><b-form-datepicker button-only reset-button v-model="filter_date_trans"></b-form-datepicker></b-col>
+                                  <b-col><b-form-datepicker class="w-100 h-100" button-only reset-button v-model="filter_date_trans"></b-form-datepicker></b-col>
                                   <b-col>
                                       <b-form-select v-model="filter_type_trans">
                                           <option value=""></option>
@@ -190,7 +190,7 @@ th, td {
                                 <b-col class="impair"><div>Délai</div></b-col>
                               </b-row>
                               <b-row>
-                                <b-col><b-form-datepicker button-only reset-button v-model="filter_date_exp"></b-form-datepicker></b-col>
+                                <b-col><b-form-datepicker class="w-100 h-100" button-only reset-button v-model="filter_date_exp"></b-form-datepicker></b-col>
                                 <b-col>
                                     <b-form-select v-model="filter_type_exp">
                                         <option value=""></option>
