@@ -56,20 +56,21 @@
                 100% {
                     width: 100%;
                 }
-
-                @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
-                  html {
-                    transform: rotate(-90deg);
-                    transform-origin: left top;
-                    width: 100vh;
-                    height: 100vw;
-                    overflow-x: hidden;
-                    position: absolute;
-                    top: 100%;
-                    left: 0;
-                  }
-                }
             }
+
+            @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
+              html {
+                transform: rotate(-90deg)!important;
+                transform-origin: left top!important;
+                width: 100vh!important;
+                height: 100vw;
+                overflow-x: hidden;
+                position: absolute;
+                top: 100%;
+                left: 0;
+              }
+            }
+
         </style>
     </head>
     <body>
