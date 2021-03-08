@@ -274,7 +274,7 @@
                                 <img src="/images/check.png" class="check-form" v-if="to != ''">
                             </b-col>
                             <b-col>
-                                <b-form-datepicker id="datepicker" placeholder="" v-model="date" class="input-form"></b-form-datepicker>
+                                <b-form-datepicker id="datepicker" placeholder="" v-model="date" class="input-form" button-only></b-form-datepicker>
                                 <img src="/images/check.png" class="check-form" v-if="date != ''">
                             </b-col>
                         </b-row>
