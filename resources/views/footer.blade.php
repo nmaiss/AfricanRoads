@@ -6,7 +6,6 @@
         width: 100%;
         font-size: 1.2em;
         bottom: 0;
-        bottom: 10px;
         position: absolute;
     }
 
@@ -32,6 +31,5 @@
 
 <div id="copyright">
 <div class="animation mb-1"></div>
-<div>
-African Roads By HERITAGES © 2021
+<div class="mt-2 mb-1">African Roads By HERITAGES © 2021</div>
 </div>

@@ -24,18 +24,6 @@
             body {
                 font-family: 'Nunito';
             }
-            html,
-            body {
-              margin: 0;
-              padding: 0;
-              min-height: 100%;
-            }
-
-            #wrapper {
-                display: flex;
-                flex-direction: column;
-                min-height: 100vh;
-            }
         </style>
     </head>
     <body>
