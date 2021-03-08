@@ -205,7 +205,7 @@ b-drop-down img{
     }
 
     .menu{
-        font-size: 10px;
+        font-size: 10px!important;
     }
 
 }
