@@ -391,7 +391,7 @@ b-drop-down img{
                       <div class="thanks-message mb-4">Merci, votre annonce est postée !</div>
                       <b-container class="bv-example-row menu-images menu mt-6">
                           <b-row align-h="center">
-                            <b-col cols="4" class="ml-4">
+                            <b-col cols="4" class="ml-4 sm-mr-4">
                                 <a href="/home"><img src="/images/home-icon-silhouette.png"></a>
                             </b-col>
                             <b-col cols="4" class="mr-4">
