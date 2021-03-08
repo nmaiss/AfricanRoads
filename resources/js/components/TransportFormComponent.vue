@@ -204,6 +204,10 @@ b-drop-down img{
         display: none!important;
     }
 
+    .menu{
+        font-size: 10px;
+    }
+
 }
 
 </style>
