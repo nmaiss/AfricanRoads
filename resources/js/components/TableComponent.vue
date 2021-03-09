@@ -59,7 +59,7 @@
     }
 
     #sub-header{
-        width: 140vw!important;
+        width: 160vw!important;
     }
 }
 
