@@ -107,6 +107,7 @@ th, td {
 
     .pair, .impair{
         font-size: 10px;
+        line-height: 25px;
     }
 
     #copyright{
@@ -129,10 +130,10 @@ th, td {
     }
 
     @keyframes increase {
-    100% {
-        width: 155%!important;
+        100% {
+            width: 155%!important;
+        }
     }
-}
 }
 
 </style>
