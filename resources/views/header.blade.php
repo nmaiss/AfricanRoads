@@ -183,7 +183,7 @@
             </div>
             <div id="navbar-title">
                 @if ($current_page == 'offers')
-                    <a href="/home">Accueil</a>
+                    <a href="/home">Poster une annonce</a>
                 @else
                     <a href="/offers">Annonces</a>
                 @endif
