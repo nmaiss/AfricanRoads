@@ -32,8 +32,8 @@
 
 .col-header{
     text-align: center;
-    height: 8vh;
-    line-height: 8vh;
+    height: 7vh;
+    line-height: 6vh;
     background-color: #B5D6A7;
     color: white;
     font-size: 2em;
@@ -50,7 +50,6 @@
 @media (max-width: 800px){
     .col-header{
         font-size: 1em;
-        text-align: left;
     }
 
     .table-title{
@@ -106,18 +105,12 @@ th, td {
             <b-row id="headers">
                 <b-col class="table-title">
                     <div class="col-header">
-                        Transporteur(s)
-                    </div>
-                    <div class="filter-title">
-                        <b-button v-b-toggle.collapse-1>Trier</b-button>
+                        Transporteur(s) (<a v-b-toggle.collapse-1>Trier</a>)
                     </div>
                 </b-col>
                 <b-col class="table-title">
                     <div class="col-header">
-                        Expéditeur(s)
-                    </div>
-                    <div class="filter-title">
-                        <b-button v-b-toggle.collapse-2>Trier</b-button>
+                        Expéditeur(s) (<a v-b-toggle.collapse-2>Trier</a>)
                     </div>
                 </b-col>
             </b-row>
