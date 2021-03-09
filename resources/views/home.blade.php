@@ -99,7 +99,7 @@
                                   <img src="/images/stock.png">
                               </div>
                               <div class="title-blox">
-                                  Envoyer [marchandise(s)]
+                                  Envoyer
                               </div>
                               <div class="arrow-box">
                                   <img src="/images/S.png">
