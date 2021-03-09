@@ -340,7 +340,7 @@ b-drop-down img{
                     <b-container class="bv-example-row bv-example-row-flex-cols">
                       <b-row>
                         <b-col align-self="stretch">
-                            <b-form-input v-model="number_places" class="input-form big-form" placeholder="Nombre de places"></b-form-input>
+                            <b-form-input v-model="number_places" class="input-form big-form" placeholder="Nombre de place"></b-form-input>
                             <img src="/images/check.png" class="check-form" v-if="number_places != ''">
                         </b-col>
                         <b-row cols="1">

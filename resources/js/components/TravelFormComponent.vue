@@ -326,7 +326,7 @@
               <b-tab title="Itinéraire ">
                   <b-card-text>
                       <div class="title">
-                          Place disponible pour le transport
+                          Place(s) disponible(s) pour le transport
                       </div>
 
                       <b-container class="bv-example-row bv-example-row-flex-cols">
