@@ -1,3 +1,6 @@
+<meta name="viewport" content="width=1024">
+
+
 @include('header', ['current_page' => "offers"])
 
 @extends('app')

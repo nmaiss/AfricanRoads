@@ -1,3 +1,5 @@
+
+
 <style>
 
 .nav-link {
@@ -54,6 +56,10 @@
 
     .table-title{
         margin-right: 20px;
+    }
+
+    #sub-header{
+        width: 200vw!important;
     }
 }
 
