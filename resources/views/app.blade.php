@@ -63,7 +63,7 @@
               min-height: 100%;
             }
             body {
-              margin-bottom: 0px;
+              margin-bottom: 60px;
             }
             .footer {
               position: absolute;
