@@ -227,6 +227,12 @@
     width: 80px;
 }
 
+@media (max-width: 800px) {
+    .transport-colis{
+        height: 100px;
+    }
+}
+
 </style>
 
 <template>
@@ -281,7 +287,7 @@
                         <b-row>
                             <b-col></b-col>
                             <b-col>
-                                <div class="input-form pt-1">
+                                <div class="input-form pt-1 transport-colis">
                                     Je peux transporter un colis ?
                                 </div>
                             </b-col>

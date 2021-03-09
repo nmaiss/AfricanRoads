@@ -32,7 +32,7 @@
   <div class="container">
       <div id="copyright">
       <div class="animation mb-1"></div>
-      <div class="mt-2 mb-1">African Roads By HERITAGES © 2021</div>
+      <div class="mt-2 mb-1">African Road By HERITAGES © 2021</div>
       </div>
   </div>
 </footer>
