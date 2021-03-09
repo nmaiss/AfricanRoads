@@ -31,6 +31,13 @@
     }
 }
 
+@media (max-width: 1200px) {
+    #bags-logo{
+        display: none;
+    }
+
+}
+
 </style>
 
 <div id="means-home">
