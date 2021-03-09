@@ -100,6 +100,13 @@ th, td {
     color: #588F40;
 }
 
+@media (max-width: 1200px) {
+    #header{
+        width: 200vw;
+        background-color: #F3F3F4;
+    }
+}
+
 </style>
 
 <template>

@@ -144,11 +144,6 @@
             height: 10vh;
         }
 
-        #header{
-            width: 200vw;
-            background-color: #F3F3F4;
-        }
-
     }
 
 </style>
