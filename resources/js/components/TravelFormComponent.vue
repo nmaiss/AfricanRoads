@@ -227,9 +227,14 @@
     width: 80px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
     .transport-colis{
         height: 100px;
+    }
+
+    .input-form{
+        margin-bottom: 20px!important;
+
     }
 }
 
@@ -339,16 +344,14 @@
                               <b-form-input v-model="description" class="input-form big-form"  placeholder="Taille"></b-form-input>
                               <img src="/images/check.png" class="check-form" v-if="description != ''">
                           </b-col>
-                          <b-row cols="1">
-                              <b-col class="mb-3">
-                                  <b-form-input v-model="name" class="input-form" placeholder="Nom"></b-form-input>
-                                  <img src="/images/check.png" class="check-form" v-if="name != ''">
-                              </b-col>
-                              <b-col>
-                                  <b-form-input v-model="first_name" class="input-form"  placeholder="Prénom"></b-form-input>
-                                  <img src="/images/check.png" class="check-form" v-if="first_name != ''">
-                              </b-col>
-                          </b-row>
+                          <b-col>
+                              <b-form-input v-model="name" class="input-form big-form" placeholder="Nom"></b-form-input>
+                              <img src="/images/check.png" class="check-form" v-if="name != ''">
+                          </b-col>
+                          <b-col>
+                              <b-form-input v-model="first_name" class="input-form big-form"  placeholder="Prénom"></b-form-input>
+                              <img src="/images/check.png" class="check-form" v-if="first_name != ''">
+                          </b-col>
                           <b-col align-self="stretch">
                               <b-form-input v-model="phone_number" class="input-form big-form"  placeholder="Numéro de téléphone"></b-form-input>
                               <img src="/images/check.png" class="check-form" v-if="phone_number != ''">
