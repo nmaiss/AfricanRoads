@@ -112,7 +112,7 @@ th, td {
     #copyright{
         text-align: center;
         color: gray;
-        width: 120%!important;
+        width: 155%!important;
         font-size: 1.2em;
     }
 
@@ -130,7 +130,7 @@ th, td {
 
     @keyframes increase {
     100% {
-        width: 120%!important;
+        width: 155%!important;
     }
 }
 }
