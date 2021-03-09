@@ -173,10 +173,10 @@
             </div>
             <div id="navabr-bags">
                 <div id="bags-title">
-                    <a href="https://www.bags-app.com/">Découvrez BAGS (colis par avions)</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.bags-app.com/">Découvrez BAGS (colis par avions)</a>
                 </div>
                 <div id="bags-logo">
-                    <a href="https://www.bags-app.com/">
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.bags-app.com/">
                         <img src="/images/bags.webp">
                     </a>
                 </div>
