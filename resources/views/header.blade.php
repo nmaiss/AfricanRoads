@@ -122,7 +122,7 @@
             display: none!important;
         }
 
-        #navbar-bags img{
+        #navbar-bags2 img{
             display: none!important;
         }
 
@@ -131,7 +131,7 @@
             display: none;
         }
 
-        #bags-logo{
+        #bags-logo2{
             display: none;
         }
 
@@ -142,6 +142,10 @@
         #header{
             margin-bottom: 40px;
             height: 10vh;
+        }
+
+        #navabr-bags{
+            right: -100px;
         }
 
     }
