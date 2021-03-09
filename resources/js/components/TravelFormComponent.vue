@@ -389,7 +389,7 @@
           </b-card>
       </div>
       <div v-if="max_step === 2">
-          <div class="container">
+          <div class="container thank-container">
               <div class="row justify-content-center">
                   <div class="col-md-8">
                       <div class="thanks-message mb-4">Merci, votre annonce est postée !</div>
@@ -404,10 +404,10 @@
                           </b-row>
                           <b-row align-h="center">
                             <b-col cols="4">
-                                <a href="/home">Accueil</a>
+                                <a href="/home" class="menu-thank">Accueil</a>
                             </b-col>
                             <b-col cols="4">
-                                <a href="/offers">Annonces</a>
+                                <a href="/offers" class="menu-thank">Annonces</a>
                             </b-col>
                           </b-row>
                       </b-container>

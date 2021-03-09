@@ -208,6 +208,10 @@ b-drop-down img{
         font-size: 10px!important;
     }
 
+    .menu-thank{
+        font-size: 20px!important;
+    }
+
 }
 
 </style>
@@ -404,10 +408,10 @@ b-drop-down img{
                           </b-row>
                           <b-row align-h="center">
                             <b-col cols="4">
-                                <a href="/home">Accueil</a>
+                                <a href="/home" class="menu-thank">Accueil</a>
                             </b-col>
                             <b-col cols="4">
-                                <a href="/offers">Annonces</a>
+                                <a href="/offers" class="menu-thank">Annonces</a>
                             </b-col>
                           </b-row>
                       </b-container>
