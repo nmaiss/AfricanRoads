@@ -102,7 +102,7 @@ th, td {
 
 @media (max-width: 1200px) {
     #header{
-        width: 200vw;
+        width: 100vw;
         background-color: #F3F3F4;
     }
 
@@ -360,6 +360,22 @@ th, td {
                         label: 'Délai',
                         class: 'pair',
                         sortable: true
+                    },
+                    {
+                        key: 'contact2',
+                        label: ''
+                    },
+                    {
+                        key: 'contact3',
+                        label: ''
+                    },
+                    {
+                        key: 'contact4',
+                        label: ''
+                    },
+                    {
+                        key: 'contact5',
+                        label: ''
                     },
                     {
                         key: 'contact',
