@@ -100,6 +100,31 @@ th, td {
     color: #588F40;
 }
 
+#copyright2{
+    text-align: center;
+    color: gray;
+    width: 100%;
+    font-size: 1.2em;
+}
+
+.animation2{
+  height:0px;
+  width:1px;
+  border-bottom:1px solid #000;
+
+  -webkit-animation: increase 3s;
+  -moz-animation:    increase 3s;
+  -o-animation:      increase 3s;
+  animation:         increase 3s infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes increase {
+    100% {
+        width: 99%;
+    }
+}
+
 @media (max-width: 1200px) {
     #header{
         background-color: #F3F3F4;
