@@ -8,7 +8,7 @@
 @section('content')
 
 <div id="app">
-    <table-component></table-component>
+    <table-component class="mb-6"></table-component>
 </div>
 
 <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
