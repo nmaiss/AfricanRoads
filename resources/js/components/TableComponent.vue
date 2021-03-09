@@ -108,6 +108,31 @@ th, td {
     .pair, .impair{
         font-size: 10px;
     }
+
+    #copyright{
+        text-align: center;
+        color: gray;
+        width: 120%!important;
+        font-size: 1.2em;
+    }
+
+    .animation{
+      height:0px;
+      width:1px;
+      border-bottom:1px solid #000;
+
+      -webkit-animation: increase 3s;
+      -moz-animation:    increase 3s;
+      -o-animation:      increase 3s;
+      animation:         increase 3s infinite;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes increase {
+    100% {
+        width: 120%!important;
+    }
+}
 }
 
 </style>
@@ -248,6 +273,12 @@ th, td {
                 </b-col>
             </b-row>
         </b-container>
+        <footer class="footer mt-auto py-3">
+          <div id="copyright">
+              <div class="animation mb-1"></div>
+              <div class="mt-2">African Road By HERITAGES © 2021</div>
+          </div>
+        </footer>
     </div>
 </template>
 
