@@ -239,6 +239,10 @@
     .name-group{
         margin-top: 20px!important;
     }
+
+    .thanks-message{
+            font-size: 30px!important;
+    }
 }
 
 </style>
