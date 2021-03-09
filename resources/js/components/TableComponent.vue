@@ -131,7 +131,7 @@ th, td {
 
     @keyframes increase {
         99% {
-            width: 155%;
+            width: 100%;
         }
     }
 }
