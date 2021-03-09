@@ -59,7 +59,7 @@
     }
 
     #sub-header{
-        width: 200vw!important;
+        width: 100vw!important;
     }
 }
 
@@ -102,7 +102,6 @@ th, td {
 
 @media (max-width: 1200px) {
     #header{
-        width: 100vw;
         background-color: #F3F3F4;
     }
 
