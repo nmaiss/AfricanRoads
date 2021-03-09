@@ -9,6 +9,18 @@ body{
     color: white!important;
 }
 
+.animation{
+  height:0px;
+  width:1px;
+  border-bottom:1px solid white!important;
+
+  -webkit-animation: increase 3s;
+  -moz-animation:    increase 3s;
+  -o-animation:      increase 3s;
+  animation:         increase 3s infinite;
+  animation-fill-mode: forwards;
+}
+
 
 </style>
 

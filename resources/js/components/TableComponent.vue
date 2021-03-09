@@ -32,8 +32,8 @@
 
 .col-header{
     text-align: center;
-    height: 6vh;
-    line-height: 5vh;
+    height: 8vh;
+    line-height: 8vh;
     background-color: #B5D6A7;
     color: white;
     font-size: 2em;

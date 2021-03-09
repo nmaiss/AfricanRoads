@@ -183,9 +183,9 @@
             </div>
             <div id="navbar-title">
                 @if ($current_page == 'offers')
-                    <a href="/home">Page d'accueil</a>
+                    <a href="/home">Accueil</a>
                 @else
-                    <a href="/offers">Consulter les annonces</a>
+                    <a href="/offers">Annonces</a>
                 @endif
             </div>
         </div>

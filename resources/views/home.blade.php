@@ -157,6 +157,7 @@
 
 .parent-box {
     position: relative;
+    height: 400px;
 }
 
 .child-box {

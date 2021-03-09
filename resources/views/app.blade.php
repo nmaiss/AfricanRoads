@@ -29,7 +29,7 @@
                 min-height: 93vh;
                 display: block;
                 position: relative;
-                padding-bottom: 200px;
+                padding-bottom: 6vh;
             }
 
 
@@ -54,32 +54,34 @@
 
                 @keyframes increase {
                 100% {
-                    width: 100%;
+                    width: 99%;
                 }
             }
 
-            @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
-              html {
-                transform: rotate(-90deg)!important;
-                transform-origin: left top!important;
-                width: 100vh!important;
-                height: 100vw;
-                position: absolute;
-                top: 100%;
-                left: 0;
-              }
+            html {
+              position: relative;
+              min-height: 100%;
+            }
+            body {
+              margin-bottom: 0px;
+            }
+            .footer {
+              position: absolute;
+              bottom: 0;
+              width: 100%;
+              height: 60px;
             }
 
         </style>
     </head>
     <body>
-        <div id="wrapper">
+        <main role="main">
             @yield('content')
-        </div>
+        </main>
         <footer class="footer mt-auto py-3">
           <div id="copyright">
               <div class="animation mb-1"></div>
-              <div class="mt-2 mb-1">African Roads By HERITAGES © 2021</div>
+              <div class="mt-2">African Roads By HERITAGES © 2021</div>
           </div>
         </footer>
         <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
