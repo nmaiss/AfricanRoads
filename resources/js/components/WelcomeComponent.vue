@@ -50,7 +50,7 @@
                 <div class="menu-el">
                     <a href="/home">
                         <div class="menu-image">
-                            <img src="/images/home-icon-silhouette.png">
+                            <img src="/images/hut.png">
                         </div>
                         <div class="menu-title">
                             Page d'accueil
