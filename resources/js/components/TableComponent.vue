@@ -68,7 +68,7 @@ th, td {
 }
 
 .pair div {
-    padding: 10px;
+    padding: 8px;
     background-color: #91C37C;
     color: #447B2E;
     border-radius: 5px;
@@ -83,7 +83,7 @@ th, td {
     background-color: #D6E9D3;
     color: #588F40;
     border-radius: 5px;
-    padding: 10px;
+    padding: 8px;
 }
 
 .collapse-title{
