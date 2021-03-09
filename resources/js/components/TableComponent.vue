@@ -61,13 +61,6 @@ th, td {
     text-align: center!important;
 }
 
-@media only screen and (orientation:portrait){
-  body {
-    height: 100vw;
-    transform: rotate(90deg);
-  }
-}
-
 .pair div {
     padding: 10px;
     background-color: #91C37C;
