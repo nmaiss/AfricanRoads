@@ -81,7 +81,7 @@
         </style>
     </head>
     <body>
-        <main role="main">
+        <main role="main" class="mb-6">
             @yield('content')
         </main>
         <footer class="footer mt-auto py-3">
