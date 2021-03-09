@@ -110,14 +110,14 @@ th, td {
         line-height: 25px;
     }
 
-    #copyright{
+    #copyright2{
         text-align: center;
         color: gray;
         width: 155%;
         font-size: 1.2em;
     }
 
-    .animation{
+    .animation2{
       height:0px;
       width:1px;
       border-bottom:1px solid #000;
@@ -130,7 +130,7 @@ th, td {
     }
 
     @keyframes increase {
-        100% {
+        99% {
             width: 155%;
         }
     }
@@ -275,8 +275,8 @@ th, td {
             </b-row>
         </b-container>
         <footer class="footer mt-auto py-3">
-          <div id="copyright">
-              <div class="animation mb-1"></div>
+          <div id="copyright2">
+              <div class="animation2 mb-1"></div>
               <div class="mt-2">African Road By HERITAGES © 2021</div>
           </div>
         </footer>
