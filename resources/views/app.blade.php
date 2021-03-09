@@ -77,13 +77,6 @@
                 text-decoration: none;
             }
 
-            @media only screen and (orientation:portrait){
-              body {
-                height: 110vw;
-                transform: rotate(90deg);
-              }
-            }
-
 
         </style>
     </head>
