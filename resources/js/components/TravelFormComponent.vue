@@ -347,7 +347,7 @@
                               <b-form-input v-model="description" class="input-form big-form"  placeholder="Taille"></b-form-input>
                               <img src="/images/check.png" class="check-form" v-if="description != ''">
                           </b-col>
-                          <b-row cols="1">
+                          <b-row cols="1" class="name-group">
                               <b-col class="mb-3">
                                   <b-form-input v-model="name" class="input-form" placeholder="Nom"></b-form-input>
                                   <img src="/images/check.png" class="check-form" v-if="name != ''">
