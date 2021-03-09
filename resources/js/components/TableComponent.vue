@@ -118,7 +118,7 @@ th, td {
         <div id="sub-header">
 
         </div>
-        <b-container class="content-tables" fluid>
+        <b-container class="content-tables mb-6" fluid>
             <b-row id="headers">
                 <b-col class="table-title">
                     <div class="col-header">
