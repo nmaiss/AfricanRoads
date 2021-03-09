@@ -105,6 +105,10 @@ th, td {
         width: 200vw;
         background-color: #F3F3F4;
     }
+
+    .pair, .impair{
+        font-size: 10px;
+    }
 }
 
 </style>
@@ -133,7 +137,7 @@ th, td {
                         <b-card>
                           <p class="card-text text-center">
                               <div class="collapse-title mb-3">Trier par...</div>
-                              <b-container class="">
+                              <b-container class="collapse-filters">
                                 <b-row class="mb-2">
                                   <b-col class="pair"><div>Date</div></b-col>
                                   <b-col class="impair"><div>Type</div></b-col>
