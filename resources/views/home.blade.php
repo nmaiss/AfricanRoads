@@ -6,6 +6,16 @@
 
 <style>
 
+#navbar-title:after {
+    content: '';
+    background: url("/images/Loupe.png") center no-repeat;
+    background-size: 40px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+}
+
 #means-home{
     margin-top: 20px;
     margin-bottom: 40px;

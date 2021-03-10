@@ -2,6 +2,16 @@
 
 <style>
 
+#navbar-title:after {
+    content: '';
+    background: url("/images/home-icon-silhouette.png") center no-repeat;
+    background-size: 40px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+}
+
 .nav-link {
     background-color: #92C47D!important;
     color: white!important;
