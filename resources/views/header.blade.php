@@ -145,7 +145,7 @@
         }
 
         #navabr-bags{
-            right: -100px;
+            right: -120px;
         }
 
     }
