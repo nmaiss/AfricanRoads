@@ -25,7 +25,7 @@
             </div>
 
             <div class="form-group row">
-                <label for="to_only_select" class="col-md-4 col-form-label text-md-right">{{ __('Point d\'arrivée uniquement') }}</label>
+                <label for="to_only_select" class="col-md-4 col-form-label text-md-right">{{ __('Point de départ uniquement') }}</label>
 
                 <div class="col-md-6">
                     <input class="form-control" type="checkbox" id="to_only_select" name="to_only_select">
@@ -47,7 +47,7 @@
           <th scope="col">#</th>
           <th scope="col">Nom</th>
           <th scope="col">Pays</th>
-          <th scope="col">Arrivée uniquement</th>
+          <th scope="col">Départ uniquement</th>
           <th scope="col">Supprimer</th>
         </tr>
       </thead>

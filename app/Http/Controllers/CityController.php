@@ -13,7 +13,7 @@ class CityController extends Controller
     }
 
     public function index_from(){
-        return City::where('to_only', "false")->get();
+        return City::where('to_only', "true")->get();
     }
 
     public function store(Request $req) {
