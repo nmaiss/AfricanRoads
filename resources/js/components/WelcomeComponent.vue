@@ -69,7 +69,7 @@
                             <img src="/images/megaphone.png">
                         </div>
                         <div class="menu-title">
-                            Consulter les annonces
+                            Poster une annonce
                         </div>
                     </a>
                 </div>
