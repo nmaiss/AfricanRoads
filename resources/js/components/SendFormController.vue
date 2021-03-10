@@ -213,6 +213,7 @@
                         <b-row class="mb-3">
                             <b-col>
                                 <b-form-select v-model="from" class="input-form">
+                                    <option value="">Départ</option>
                                     <option v-for="select_from in cities_from" :key="select_from.id" :value="select_from.name">
                                         {{ select_from.name }}
                                     </option>
@@ -221,6 +222,7 @@
                             </b-col>
                             <b-col>
                                 <b-form-select v-model="to" class="input-form">
+                                    <option value="">Arrivée</option>
                                     <option v-for="select_to in cities_to" :key="select_to.id" :value="select_to.name">
                                         {{ select_to.name }}
                                     </option>
@@ -239,6 +241,7 @@
                             <b-col></b-col>
                             <b-col>
                                 <b-form-select v-model="delay" class="input-form">
+                                    <option value="">Délais</option>
                                     <option v-for="select_delay in delays" :key="select_delay.id" :value="select_delay.name">
                                         {{ select_delay.name }}
                                     </option>

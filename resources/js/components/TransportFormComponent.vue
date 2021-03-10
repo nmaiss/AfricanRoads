@@ -283,7 +283,8 @@ b-drop-down img{
                     <b-container class="bv-example-row bv-example-row-flex-cols infos-form">
                         <b-row class="mb-3">
                             <b-col>
-                                <b-form-select v-model="from" class="input-form">
+                                <b-form-select v-model="from" class="input-form" placeholder="Départ">
+                                    <option value="">Départ</option>
                                     <option v-for="select_from in from_cities" :key="select_from.id" :value="select_from.name">
                                         {{ select_from.name }}
                                     </option>
@@ -291,11 +292,12 @@ b-drop-down img{
                                 <img src="/images/check.png" class="check-form" v-if="from != ''">
                             </b-col>
                             <b-col>
-                                <b-form-datepicker id="datepicker" v-model="date" placeholder="" class="input-form" button-only></b-form-datepicker>
+                                <b-form-datepicker id="datepicker" v-model="date" placeholder="Date" class="input-form" button-only></b-form-datepicker>
                                 <img src="/images/check.png" class="check-form" v-if="date != ''">
                             </b-col>
                             <b-col>
                                 <b-form-select v-model="to" class="input-form">
+                                    <option value="">Arrivée</option>
                                     <option v-for="select_to in to_cities" :key="select_to.id" :value="select_to.name">
                                         {{ select_to.name }}
                                     </option>
@@ -306,7 +308,7 @@ b-drop-down img{
                         <b-row>
                             <b-col></b-col>
                             <b-col>
-                                <b-form-timepicker v-model="hour" locale="fr" class="input-form" button-only></b-form-timepicker>
+                                <b-form-timepicker v-model="hour" placeholder="heure" locale="fr" class="input-form" button-only></b-form-timepicker>
                                 <img src="/images/check.png" class="check-form" v-if="hour != ''">
                             </b-col>
                             <b-col></b-col>
