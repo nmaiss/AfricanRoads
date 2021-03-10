@@ -245,7 +245,7 @@
     }
 
     .input-form{
-        font-size: 10px!important;
+        font-size: 15px!important;
     }
 }
 
