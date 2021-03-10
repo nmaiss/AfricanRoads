@@ -23,7 +23,7 @@ Route::get('/', function () {
 });
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index']);
-Route::get('/admin', [\App\Http\Controllers\AdminController::class, 'index'])->name('admin');
+
 Route::get('/offers', [\App\Http\Controllers\OffersController::class, 'index']);
 Route::get('/send', [\App\Http\Controllers\SendController::class, 'index']);
 
@@ -51,3 +51,7 @@ Route::get('/city/index', [\App\Http\Controllers\CityController::class, 'index']
 Route::get('/city/index_from', [\App\Http\Controllers\CityController::class, 'index_from']);
 Route::post('/city/store', [\App\Http\Controllers\CityController::class, 'store']);
 Route::get('/city/{id}/delete', [\App\Http\Controllers\CityController::class, 'delete']);
+
+Auth::routes();
+
+Route::get('/admin', [\App\Http\Controllers\AdminController::class, 'index'])->middleware('auth')->name('admin');
