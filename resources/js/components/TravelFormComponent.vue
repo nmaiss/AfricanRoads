@@ -243,6 +243,10 @@
     .thanks-message{
             font-size: 30px!important;
     }
+
+    .input-form{
+        font-size: 10px!important;
+    }
 }
 
 </style>

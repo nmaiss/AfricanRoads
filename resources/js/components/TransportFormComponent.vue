@@ -212,12 +212,6 @@ b-drop-down img{
         font-size: 20px!important;
     }
 
-    .footer {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-    }
-
 }
 
 
