@@ -25,6 +25,12 @@
         text-decoration: none!important;
     }
 
+    @media only screen and (max-width: 800px) {
+        .centered-icons{
+            transform: translateY(-100%);
+        }
+    }
+
     @media only screen and (max-width: 550px) {
         .menu-title{
             font-size: 5vw;
