@@ -512,8 +512,8 @@ b-drop-down img{
                     this.means=response.data;
                     console.log(response)
                 })
-            axios.get('/city/index').then(response => (this.to_cities = response.data))
-            axios.get('/city/index_from').then(response => (this.from_cities = response.data))
+            axios.get('/city/index').then(response => (this.from_cities = response.data))
+            axios.get('/city/index_from').then(response => (this.to_cities = response.data))
             console.log('Component mounted.')
         }
     }

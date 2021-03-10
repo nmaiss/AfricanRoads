@@ -535,12 +535,12 @@
                 })
             axios.get('/city/index')
                 .then((response) => {
-                    this.cities_to=response.data;
+                    this.cities_from=response.data;
                     console.log(response)
                 })
             axios.get('/city/index_from')
                 .then((response) => {
-                    this.cities_from=response.data;
+                    this.cities_to=response.data;
                     console.log(response)
                 })
             console.log('Component mounted.')
