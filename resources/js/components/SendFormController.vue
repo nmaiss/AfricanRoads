@@ -175,11 +175,13 @@
 
 .urgent-form{
     width: 50px;
-    height: 100%;
+    height: 45px!important;
     background-color: #E26B6B;
     border: 5px solid #DC5958;
     border-radius: 15px;
 }
+
+
 
 </style>
 
