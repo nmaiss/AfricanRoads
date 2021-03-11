@@ -230,7 +230,8 @@ b-drop-down img{
                 <img src="/images/tourist.png">
             </div>
             <div id="title-form">
-                <p>Passager(s) / Marchandise(s)</p>
+                <p v-if="type == 'passenger'">Passager(s)</p>
+                 <p v-if="type == 'merchandise'">Marchandise(s)</p>
             </div>
             <div id="right-img-form">
                 <img src="/images/stock.png">

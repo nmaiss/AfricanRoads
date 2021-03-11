@@ -9,11 +9,11 @@ use Illuminate\Http\Request;
 class CityController extends Controller
 {
     public function index(){
-        return City::all();
+        return City::orderBy('name', 'ASC')->get();
     }
 
     public function index_from(){
-        return City::where('to_only', "false")->get();
+        return City::where('to_only', "false")->orderBy('name', 'ASC')->get();
     }
 
     public function store(Request $req) {
