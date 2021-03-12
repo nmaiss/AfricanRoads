@@ -290,8 +290,8 @@ th, td {
                             {{ data.item.created_at.substr(11, 5) }}
                         </template>
                         <template #cell(type)="data">
-                            <p v-if="data.item.type == 'traveler'">Voyageur</p>
-                            <p v-if="data.item.type == 'sender'">Expéditeur</p>
+                            <p v-if="data.item.type == 'sender'">Voyageur</p>
+                            <p v-if="data.item.type == 'traveler'">Expéditeur</p>
                         </template>
                         <template #cell(contact)="data">
                             <contact :transporter="data.item"></contact>
