@@ -250,7 +250,7 @@
     }
 
     body{
-        overflow-y: hidden;
+        overflow-y: hidden!important;
     }
 }
 
