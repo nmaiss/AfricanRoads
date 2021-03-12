@@ -255,21 +255,11 @@ th, td {
                             <b-container class="bv-example-row">
                               <b-row class="mb-2">
                                 <b-col class="pair"><div>Date</div></b-col>
-                                <b-col class="impair"><div>Type</div></b-col>
                                 <b-col class="pair"><div>Départ</div></b-col>
                                 <b-col class="impair"><div>Délai</div></b-col>
                               </b-row>
                               <b-row>
                                 <b-col><b-form-datepicker class="w-100 h-100" button-only reset-button v-model="filter_date_exp"></b-form-datepicker></b-col>
-                                <b-col>
-                                    <b-form-select v-model="filter_type_exp">
-                                        <option value=""></option>
-                                        <option v-for="select_mean in means" :key="select_mean.id" :value="select_mean.name">
-                                            {{ select_mean.name }}
-                                        </option>
-                                    </b-form-select>
-                                </b-col>
-                                <b-col>
                                     <b-form-select v-model="filter_from_exp">
                                         <option value=""></option>
                                         <option v-for="select_from in from_cities" :key="select_from.id" :value="select_from.name">
