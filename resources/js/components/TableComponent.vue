@@ -135,6 +135,18 @@ th, td {
     }
 }
 
+.col-header:after{
+    content: '';
+    background: url(/images/filter.png) center no-repeat;
+    background-size: 30px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+
+}
+
 @media (max-width: 1200px) {
     #header{
         background-color: #F3F3F4;
