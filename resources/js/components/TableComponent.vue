@@ -143,7 +143,8 @@ th, td {
     width: 30px;
     height: 30px;
     text-align: center;
-    line-height: 30px;
+    position: absolute;
+    top: 10px;
 
 }
 
