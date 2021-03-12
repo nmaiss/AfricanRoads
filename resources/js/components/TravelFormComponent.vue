@@ -248,6 +248,10 @@
     .input-form{
         font-size: 15px!important;
     }
+
+    body{
+        overflow-y: hidden;
+    }
 }
 
 </style>
