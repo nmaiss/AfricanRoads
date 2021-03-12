@@ -260,6 +260,7 @@ th, td {
                               </b-row>
                               <b-row>
                                 <b-col><b-form-datepicker class="w-100 h-100" button-only reset-button v-model="filter_date_exp"></b-form-datepicker></b-col>
+                                <b-col>
                                     <b-form-select v-model="filter_from_exp">
                                         <option value=""></option>
                                         <option v-for="select_from in from_cities" :key="select_from.id" :value="select_from.name">
