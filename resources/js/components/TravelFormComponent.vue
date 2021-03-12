@@ -251,6 +251,7 @@
 
     body{
         overflow-y: hidden!important;
+        height: 100vh;
     }
 }
 
