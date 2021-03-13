@@ -307,6 +307,7 @@ th, td {
                                 <b-col>
                                     <b-form-select v-model="filter_delay_exp">
                                         <option value=""></option>
+                                        <option value="Aucun"></option>
                                         <option v-for="select_delay in delays" :key="select_delay.id" :value="select_delay.name">
                                             {{ select_delay.name }}
                                         </option>
@@ -521,15 +522,22 @@ th, td {
 
             filtered_exporters () {
                 this.filtered_exp = this.expedients;
+
                 this.filtered_exp = this.filter_date_exp
                 ? this.filtered_exp.filter(item => item.created_at.includes(this.filter_date_exp))
                 :this.filtered_exp;
+
                 this.filtered_exp =  this.filter_type_exp
                 ? this.filtered_exp.filter(item => item.mean.includes(this.filter_type_exp))
                 :this.filtered_exp;
+
                 this.filtered_exp =  this.filter_from_exp
                 ? this.filtered_exp.filter(item => item.from.includes(this.filter_from_exp))
                 :this.filtered_exp;
+
+                if (this.filter_delay_exp == "1 Jour"){
+                    this.filter_delay_exp = "Urgent";
+                }
                 this.filtered_exp =  this.filter_delay_exp
                 ? this.filtered_exp.filter(item => item.delay.includes(this.filter_delay_exp))
                 :this.filtered_exp;

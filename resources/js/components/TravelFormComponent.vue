@@ -467,7 +467,8 @@
             company: "",
             country: "",
             phone_number: "",
-            typee: 'traveler'
+            typee: 'traveler',
+            delay: 'Aucun'
           }
         },
         methods: {
