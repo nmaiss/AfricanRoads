@@ -499,13 +499,13 @@ th, td {
             filtered_exporters () {
                 this.filtered_exp = this.expedients;
                 this.filtered_exp = this.filter_date_exp
-                ? this.filtered_exp.filter(item => item.date.includes(this.filter_date_exp))
+                ? this.filtered_exp.filter(item => item.created_at.includes(this.filter_date_exp))
                 :this.filtered_exp;
                 this.filtered_exp =  this.filter_type_exp
                 ? this.filtered_exp.filter(item => item.mean.includes(this.filter_type_exp))
                 :this.filtered_exp;
-                this.filtered_exp =  this.filter_delay_exp
-                ? this.filtered_exp.filter(item => item.from.includes(this.filter_delay_exp))
+                this.filtered_exp =  this.filter_from_exp
+                ? this.filtered_exp.filter(item => item.from.includes(this.filter_from_exp))
                 :this.filtered_exp;
                 this.filtered_exp =  this.filter_delay_exp
                 ? this.filtered_exp.filter(item => item.delay.includes(this.filter_delay_exp))
