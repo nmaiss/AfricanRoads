@@ -59,6 +59,11 @@
     font-weight: bold;
 }
 
+.border-right2 {
+    border-right: 1px solid #dee2e6;
+}
+
+
 @media (max-width: 800px){
     .col-header{
         font-size: 1em;
@@ -70,6 +75,10 @@
 
     #sub-header{
         width: 155vw!important;
+    }
+
+    .col{
+        border-right: none!important;
     }
 }
 
@@ -205,7 +214,7 @@ th, td {
                 </b-col>
             </b-row>
             <b-row>
-                <b-col class="border-right">
+                <b-col class="border-right2">
                     <b-collapse id="collapse-1" class="">
                         <b-card>
                           <p class="card-text text-center">
