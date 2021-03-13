@@ -90,7 +90,7 @@
     display: none;
 }
 
-.input-form {
+.input-form2 {
     background-color: #D9EAD3;
     color: #93C47D;
     border: 5px solid #B6D7A8;
@@ -231,12 +231,13 @@
     .transport-colis{
         height: 110px!important;
         width: 100px!important;
-        text-align: center!important;
+        line-height: 60px;
     }
 
-    .transport-colis{
+    .transport-colis span{
+        display: inline-block;
         vertical-align: middle;
-
+        line-height: 18px;
     }
 
     .input-form{
@@ -248,7 +249,7 @@
     }
 
     .thanks-message{
-            font-size: 30px!important;
+        font-size: 30px!important;
     }
 
     .input-form{
@@ -313,7 +314,7 @@
                             <b-col></b-col>
                             <b-col>
                                 <div class="input-form pt-1 transport-colis">
-                                    <span>Je peux transporter un colis ?</span>
+                                    <span class="mt-3">Je peux transporter un colis ?</span>
                                 </div>
                             </b-col>
                             <b-col>
