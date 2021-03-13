@@ -73,7 +73,6 @@
     }
 
     .filter-text{
-        margin-left: 20px!important;
     }
 
     .col-header{
