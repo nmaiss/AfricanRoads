@@ -234,6 +234,11 @@
         text-align: center!important;
     }
 
+    .transport-colis{
+        vertical-align: middle;
+
+    }
+
     .input-form{
         margin-bottom: 20px!important;
     }
@@ -308,7 +313,7 @@
                             <b-col></b-col>
                             <b-col>
                                 <div class="input-form pt-1 transport-colis">
-                                    Je peux transporter un colis ?
+                                    <span>Je peux transporter un colis ?</span>
                                 </div>
                             </b-col>
                             <b-col>

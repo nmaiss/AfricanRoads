@@ -253,7 +253,7 @@ th, td {
                                   <b-col>
                                       <b-form-select v-model="filter_from_trans">
                                           <option value=""></option>
-                                          <option v-for="select_from in from_cities" :key="select_from.id" :value="select_from.name">
+                                          <option v-for="select_from in to_cities" :key="select_from.id" :value="select_from.name">
                                               {{ select_from.name }}
                                           </option>
                                       </b-form-select>
@@ -261,7 +261,7 @@ th, td {
                                   <b-col>
                                       <b-form-select v-model="filter_to_trans">
                                           <option value=""></option>
-                                          <option v-for="select_to in to_cities" :key="select_to.id" :value="select_to.name">
+                                          <option v-for="select_to in from_cities" :key="select_to.id" :value="select_to.name">
                                               {{ select_to.name }}
                                           </option>
                                       </b-form-select>
@@ -299,7 +299,7 @@ th, td {
                                 <b-col>
                                     <b-form-select v-model="filter_from_exp">
                                         <option value=""></option>
-                                        <option v-for="select_from in from_cities" :key="select_from.id" :value="select_from.name">
+                                        <option v-for="select_from in to_cities" :key="select_from.id" :value="select_from.name">
                                             {{ select_from.name }}
                                         </option>
                                     </b-form-select>
@@ -307,7 +307,7 @@ th, td {
                                 <b-col>
                                     <b-form-select v-model="filter_to_exp">
                                         <option value=""></option>
-                                        <option v-for="select_to in to_cities" :key="select_to.id" :value="select_to.name">
+                                        <option v-for="select_to in from_cities" :key="select_to.id" :value="select_to.name">
                                             {{ select_to.name }}
                                         </option>
                                     </b-form-select>
