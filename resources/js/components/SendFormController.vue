@@ -181,7 +181,11 @@
     border-radius: 15px;
 }
 
-
+@media (max-width: 800px) {
+    .urgent-check-title {
+        bottom: 30px!important;
+    }
+}
 
 </style>
 
