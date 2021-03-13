@@ -291,8 +291,8 @@ th, td {
                             <b-container class="bv-example-row">
                               <b-row class="mb-2">
                                 <b-col class="pair"><div>Date</div></b-col>
-                                <b-col class="pair"><div>Départ</div></b-col>
-                                <b-col class="impair"><div>Délai</div></b-col>
+                                <b-col class="impair"><div>Départ</div></b-col>
+                                <b-col class="pair"><div>Arrivée</div></b-col>
                               </b-row>
                               <b-row>
                                 <b-col><b-form-datepicker class="w-100 h-100" button-only reset-button v-model="filter_date_exp"></b-form-datepicker></b-col>
@@ -305,11 +305,10 @@ th, td {
                                     </b-form-select>
                                 </b-col>
                                 <b-col>
-                                    <b-form-select v-model="filter_delay_exp">
+                                    <b-form-select v-model="filter_to_exp">
                                         <option value=""></option>
-                                        <option value="Aucun">Aucun</option>
-                                        <option v-for="select_delay in delays" :key="select_delay.id" :value="select_delay.name">
-                                            {{ select_delay.name }}
+                                        <option v-for="select_to in to_cities" :key="select_to.id" :value="select_to.name">
+                                            {{ select_to.name }}
                                         </option>
                                     </b-form-select>
                                 </b-col>
@@ -360,7 +359,7 @@ th, td {
                 filter_date_exp: '',
                 filter_type_exp: '',
                 filter_from_exp: '',
-                filter_delay_exp: '',
+                filter_to_exp: '',
                 transProps: {
                   name: 'flip-list'
                 },
@@ -535,11 +534,8 @@ th, td {
                 ? this.filtered_exp.filter(item => item.from.includes(this.filter_from_exp))
                 :this.filtered_exp;
 
-                if (this.filter_delay_exp == "1 Jour"){
-                    this.filter_delay_exp = "Urgent";
-                }
-                this.filtered_exp =  this.filter_delay_exp
-                ? this.filtered_exp.filter(item => item.delay.includes(this.filter_delay_exp))
+                this.filtered_exp =  this.filter_to_exp
+                ? this.filtered_exp.filter(item => item.to.includes(this.filter_to_exp))
                 :this.filtered_exp;
                 return this.filtered_exp;
             }
