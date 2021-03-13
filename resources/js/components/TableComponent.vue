@@ -68,12 +68,17 @@
 }
 
 @media (max-width: 800px){
-    .filter-text span{
+    .filter-texdt span{
         display: none!important;
+    }
+
+    .filter-text{
+
     }
 
     .col-header{
         font-size: 1em;
+        text-align: left!important;
     }
 
     .table-title{
@@ -214,12 +219,12 @@ th, td {
             <b-row id="headers">
                 <b-col class="table-title">
                     <div class="col-header">
-                        Transporteur(s) <a v-b-toggle.collapse-1 class="filter-text"><span>Trier</span></a>
+                        &nbsp&nbsp&nbspTransporteur(s) <a v-b-toggle.collapse-1 class="filter-text"><span>Trier</span></a>
                     </div>
                 </b-col>
                 <b-col class="table-title">
                     <div class="col-header">
-                        Expéditeur(s) <a v-b-toggle.collapse-2 class="filter-text"><span>Trier</span></a>
+                        &nbsp&nbsp&nbspExpéditeur(s) <a v-b-toggle.collapse-2 class="filter-text"><span>Trier</span></a>
                     </div>
                 </b-col>
             </b-row>
