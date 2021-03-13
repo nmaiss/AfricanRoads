@@ -68,12 +68,12 @@
 }
 
 @media (max-width: 800px){
-    .filter-texdt span{
+    .filter-text span{
         display: none!important;
     }
 
     .filter-text{
-
+        margin-left: 20px!important;
     }
 
     .col-header{
