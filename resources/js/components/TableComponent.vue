@@ -63,8 +63,15 @@
     border-right: 1px solid #dee2e6;
 }
 
+.filter-text{
+    color: #447B2E;
+}
 
 @media (max-width: 800px){
+    .filter-text span{
+        display: none!important;
+    }
+
     .col-header{
         font-size: 1em;
     }
@@ -144,7 +151,7 @@ th, td {
     }
 }
 
-.col-header:after{
+.filter-text:after{
     content: '';
     background: url(/images/filter.png) center no-repeat;
     background-size: 30px;
@@ -153,7 +160,7 @@ th, td {
     height: 30px;
     text-align: center;
     position: absolute;
-    top: 10px;
+    top: 12px;
 
 }
 
@@ -204,12 +211,12 @@ th, td {
             <b-row id="headers">
                 <b-col class="table-title">
                     <div class="col-header">
-                        Transporteur(s) (<a v-b-toggle.collapse-1>Trier</a>)
+                        Transporteur(s) <a v-b-toggle.collapse-1 class="filter-text"><span>Trier</span></a>
                     </div>
                 </b-col>
                 <b-col class="table-title">
                     <div class="col-header">
-                        Expéditeur(s) (<a v-b-toggle.collapse-2>Trier</a>)
+                        Expéditeur(s) <a v-b-toggle.collapse-2 class="filter-text">Trier</a>
                     </div>
                 </b-col>
             </b-row>
