@@ -230,7 +230,8 @@
 @media (max-width: 800px) {
     .transport-colis{
         height: 110px!important;
-        text-align: center;
+        width: 100px!important;
+        text-align: center!important;
     }
 
     .input-form{
@@ -246,7 +247,7 @@
     }
 
     .input-form{
-        font-size: 15px!important;
+        font-size: 12px!important;
     }
 }
 
