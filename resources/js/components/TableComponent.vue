@@ -87,6 +87,10 @@
     .col{
         border-right: none!important;
     }
+
+    .filter-text:after{
+        top: 8px;
+    }
 }
 
 th, td {
@@ -161,7 +165,6 @@ th, td {
     text-align: center;
     position: absolute;
     top: 12px;
-
 }
 
 @media (max-width: 1200px) {
