@@ -218,12 +218,12 @@ th, td {
             <b-row id="headers">
                 <b-col class="table-title">
                     <div class="col-header">
-                        &nbsp&nbsp&nbspTransporteur(s) <a v-b-toggle.collapse-1 class="filter-text"><span>Trier</span></a>
+                        &nbsp&nbsp&nbspTransporteur(s) &nbsp&nbsp<a v-b-toggle.collapse-1 class="filter-text"><span>Trier&nbsp&nbsp</span></a>
                     </div>
                 </b-col>
                 <b-col class="table-title">
                     <div class="col-header">
-                        &nbsp&nbsp&nbspExpéditeur(s) <a v-b-toggle.collapse-2 class="filter-text"><span>Trier</span></a>
+                        &nbsp&nbsp&nbspExpéditeur(s) <a v-b-toggle.collapse-2 class="filter-text"><span>&nbsp&nbspTrier&nbsp&nbsp</span></a>
                     </div>
                 </b-col>
             </b-row>
