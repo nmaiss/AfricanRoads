@@ -93,7 +93,7 @@
     }
 
     .filter-text:after{
-        top: 8px;
+        top: 3px;
     }
 }
 
