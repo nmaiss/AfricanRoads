@@ -216,7 +216,7 @@ th, td {
                 </b-col>
                 <b-col class="table-title">
                     <div class="col-header">
-                        Expéditeur(s) <a v-b-toggle.collapse-2 class="filter-text">Trier</a>
+                        Expéditeur(s) <a v-b-toggle.collapse-2 class="filter-text"><span>Trier</span></a>
                     </div>
                 </b-col>
             </b-row>
