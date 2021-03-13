@@ -307,7 +307,7 @@ th, td {
                                 <b-col>
                                     <b-form-select v-model="filter_delay_exp">
                                         <option value=""></option>
-                                        <option value="Aucun"></option>
+                                        <option value="Aucun">Aucun</option>
                                         <option v-for="select_delay in delays" :key="select_delay.id" :value="select_delay.name">
                                             {{ select_delay.name }}
                                         </option>
