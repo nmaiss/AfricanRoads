@@ -227,7 +227,7 @@
     width: 80px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .transport-colis{
         height: 110px!important;
         width: 100px!important;
